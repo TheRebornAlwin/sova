@@ -1,0 +1,332 @@
+@import "tailwindcss";
+
+:root {
+  /* Sova palette: a calm, warm, airy room. Sage green + off-white + charcoal.
+     The variable NAMES are kept from the Slumbor skeleton so every downstream
+     text-gold / bg-gold / border-gold utility keeps working. The old amber
+     accent is now sage green. Light/dark roles are inverted. */
+  --background: #F4F1EA;        /* warm off-white, primary background */
+  --surface: #ECE7DC;          /* slightly deeper warm neutral, section variation */
+  --surface-raised: #FFFFFF;   /* raised cards, clean white on warm bg */
+  --foreground: #2E322D;        /* charcoal with a green undertone, primary text */
+  --heading: #23261F;          /* near-black green-charcoal, headings */
+  --muted: #8A8F82;            /* muted sage-gray, secondary text */
+  --gold: #8A9A82;             /* PRIMARY ACCENT, now SAGE GREEN (name kept) */
+  --gold-dark: #6E7D67;        /* deeper sage, hover/pressed */
+  --gold-light: rgba(138,154,130,0.12);
+  --gold-glow: rgba(138,154,130,0.30);
+  --purple: #C5CFBE;           /* soft light sage, secondary accent */
+  --purple-light: rgba(197,207,190,0.15);
+  --plum: #D8CFC0;             /* warm greige, rare accent */
+  --lavender: #8A8F82;         /* muted sage-gray, fine print */
+  --navy: #23261F;             /* darkest tone, footer bg */
+  --border: rgba(46,50,45,0.10);
+  --border-gold: rgba(138,154,130,0.30);
+  --slate: #6E7D67;            /* secondary text, sage */
+  --warm: #8A9A82;
+  --warm-light: rgba(138,154,130,0.12);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-raised: var(--surface-raised);
+  --color-heading: var(--heading);
+  --color-soft-white: #FBFAF6;
+  --color-light-gray: rgba(46,50,45,0.08);
+  --color-muted: var(--muted);
+  --color-gold: var(--gold);
+  --color-gold-dark: var(--gold-dark);
+  --color-gold-light: rgba(138,154,130,0.12);
+  --color-purple: var(--purple);
+  --color-purple-light: rgba(197,207,190,0.15);
+  --color-plum: var(--plum);
+  --color-lavender: var(--lavender);
+  --color-navy: var(--navy);
+  --color-slate: var(--slate);
+  --color-teal: var(--gold);
+  --color-teal-dark: var(--gold-dark);
+  --color-teal-light: rgba(138,154,130,0.12);
+  --color-warm: var(--gold);
+  --color-warm-light: rgba(138,154,130,0.12);
+  --font-sans: var(--font-body);
+  --font-heading: var(--font-heading);
+  --font-mono: var(--font-geist-mono);
+
+  --animate-aurora: aurora 60s linear infinite;
+  --animate-float: float 7s ease-in-out infinite;
+  --animate-glow-pulse: glow-pulse 4s ease-in-out infinite;
+  --animate-shimmer: shimmer 2s linear infinite;
+  --animate-fade-in: fade-in 0.8s ease-out forwards;
+  --animate-logo-reveal: logo-reveal 2s ease-out forwards;
+  --animate-spin-slow: spin 20s linear infinite;
+  --animate-breathe-glow: breathe-glow 11s ease-in-out infinite;
+  --animate-aurora-drift: aurora-drift 38s ease-in-out infinite;
+}
+
+@keyframes aurora {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-18px); }
+}
+
+@keyframes glow-pulse {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.05); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes fade-in {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes logo-reveal {
+  0% { opacity: 0; transform: scale(0.8); filter: blur(10px); }
+  100% { opacity: 1; transform: scale(1); filter: blur(0); }
+}
+
+@keyframes loading-bar {
+  0% { width: 0%; }
+  100% { width: 100%; }
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(0.8); opacity: 0.5; }
+  50% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(0.8); opacity: 0.5; }
+}
+
+@keyframes gold-shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes breathe {
+  0%, 100% { opacity: 0.03; }
+  50% { opacity: 0.08; }
+}
+
+/* The breathing light, a calm inhale/exhale rhythm (~11s) */
+@keyframes breathe-glow {
+  0%, 100% { opacity: 0.35; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.08); }
+}
+
+/* Soft drifting light, like sun moving slowly across a calm room */
+@keyframes aurora-drift {
+  0%   { transform: translate3d(-4%, -2%, 0) rotate(0deg) scale(1.05); }
+  50%  { transform: translate3d(4%, 3%, 0) rotate(7deg) scale(1.12); }
+  100% { transform: translate3d(-4%, -2%, 0) rotate(0deg) scale(1.05); }
+}
+
+@keyframes blink-colon {
+  0%, 50% { opacity: 1; }
+  50.01%, 100% { opacity: 0; }
+}
+.blink-colon {
+  animation: blink-colon 1.2s infinite;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body), system-ui, sans-serif;
+  letter-spacing: 0.01em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-heading {
+  font-family: var(--font-heading), Georgia, serif;
+  letter-spacing: -0.01em;
+}
+
+/* ── Atmosphere layers (calm, airy, spa-like) ─────────────────── */
+
+/* Soft warm vignette that draws the eye inward without going dark */
+.atmosphere-vignette {
+  background:
+    radial-gradient(ellipse 90% 70% at 50% 30%, transparent 0%, transparent 60%, rgba(216,207,192,0.35) 100%),
+    radial-gradient(ellipse 120% 100% at 50% 0%, rgba(138,154,130,0.05) 0%, transparent 45%);
+}
+
+/* The breathing sage glow, high and soft, like light off a plant by a window */
+.atmosphere-lamp {
+  background: radial-gradient(circle at center,
+    rgba(138,154,130,0.16) 0%,
+    rgba(138,154,130,0.09) 28%,
+    rgba(197,207,190,0.04) 50%,
+    transparent 70%);
+  filter: blur(50px);
+  animation: breathe-glow 11s ease-in-out infinite;
+}
+
+/* Slow drifting light in soft sage and greige */
+.atmosphere-aurora {
+  background:
+    radial-gradient(ellipse 50% 45% at 25% 30%, rgba(197,207,190,0.30) 0%, transparent 60%),
+    radial-gradient(ellipse 45% 40% at 78% 65%, rgba(216,207,192,0.28) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 50% at 60% 20%, rgba(138,154,130,0.10) 0%, transparent 55%);
+  filter: blur(60px);
+  animation: aurora-drift 38s ease-in-out infinite;
+}
+
+/* Very fine warm film grain, kept faint so it reads as paper, not noise */
+.atmosphere-grain {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+  opacity: 0.03;
+  mix-blend-mode: multiply;
+}
+
+/* Premium glass card, clean white on warm bg with a soft shadow */
+.glass-card {
+  background: linear-gradient(135deg, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0.55) 100%);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(46,50,45,0.08);
+  box-shadow:
+    0 10px 34px rgba(46,50,45,0.06),
+    0 1px 0 rgba(255,255,255,0.7),
+    inset 0 1px 0 rgba(255,255,255,0.6);
+}
+
+.glass-card-hover {
+  transition: background 0.6s ease, border-color 0.6s ease, box-shadow 0.6s ease, transform 0.6s ease;
+}
+.glass-card-hover:hover {
+  background: linear-gradient(135deg, rgba(138,154,130,0.08) 0%, rgba(255,255,255,0.6) 100%);
+  border-color: rgba(138,154,130,0.28);
+  box-shadow:
+    0 16px 44px rgba(46,50,45,0.09),
+    0 0 40px rgba(138,154,130,0.08),
+    inset 0 1px 0 rgba(255,255,255,0.7);
+}
+
+/* Premium section backgrounds */
+.section-glow-gold {
+  position: relative;
+}
+.section-glow-gold::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 80% 50% at 50% 0%, rgba(138,154,130,0.10) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.section-glow-purple {
+  position: relative;
+}
+.section-glow-purple::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 80% 50% at 50% 100%, rgba(197,207,190,0.16) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.section-gradient-teal {
+  background: linear-gradient(180deg, var(--background) 0%, var(--surface) 50%, var(--background) 100%);
+}
+
+.section-gradient-warm {
+  background: linear-gradient(180deg, var(--background) 0%, rgba(138,154,130,0.06) 50%, var(--background) 100%);
+}
+
+.section-gradient-gold {
+  background: linear-gradient(180deg, var(--background) 0%, rgba(138,154,130,0.06) 50%, var(--background) 100%);
+}
+
+.god-ray {
+  background: radial-gradient(
+    ellipse at center bottom,
+    rgba(138,154,130,0.10) 0%,
+    rgba(216,207,192,0.06) 30%,
+    transparent 70%
+  );
+}
+
+/* Sage shimmer text effect */
+.gold-shimmer {
+  background: linear-gradient(
+    110deg,
+    #8A9A82 0%,
+    #AEBBA4 25%,
+    #8A9A82 50%,
+    #AEBBA4 75%,
+    #8A9A82 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gold-shimmer 5s linear infinite;
+}
+
+/* Premium divider */
+.gold-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(138,154,130,0.35) 50%, transparent 100%);
+}
+
+/* Ambient glow behind sections */
+.ambient-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  animation: breathe 8s ease-in-out infinite;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--surface);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(138,154,130,0.35);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(138,154,130,0.55);
+}
+
+/* Respect people who'd rather not have motion */
+@media (prefers-reduced-motion: reduce) {
+  .atmosphere-lamp,
+  .atmosphere-aurora,
+  .ambient-orb,
+  .gold-shimmer,
+  .animate-float {
+    animation: none !important;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}

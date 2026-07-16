@@ -1,0 +1,64 @@
+"use client";
+
+import Image from "next/image";
+import ScrollReveal from "@/components/ui/scroll-reveal";
+
+const steps = [
+  {
+    step: 1,
+    image: "/products/nuro-step1.webp",
+    description: "Drape the Nuro over your neck and shoulders and let it settle where the tension sits.",
+  },
+  {
+    step: 2,
+    image: "/products/nuro-step2.webp",
+    description: "Press the button and pick your heat and speed, then dial it in to whatever your shoulders need tonight.",
+  },
+  {
+    step: 3,
+    image: "/products/nuro-step3.webp",
+    description: "Lean back and let it knead. Ten minutes and you can feel the day start to leave your body.",
+  },
+];
+
+export default function HowItWorks() {
+  return (
+    <section className="py-20 md:py-28 px-6 bg-background section-glow-purple">
+      <div className="max-w-4xl mx-auto">
+        <ScrollReveal>
+          <div className="text-center mb-14">
+            <h2 className="text-2xl md:text-3xl font-heading font-medium text-heading tracking-tight">
+              How to use it
+            </h2>
+          </div>
+        </ScrollReveal>
+
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-8">
+          {steps.map((s, i) => (
+            <ScrollReveal key={i} delay={i * 0.1} className="min-w-0">
+              <div className="text-center">
+                <div className="w-40 h-40 sm:w-52 sm:h-52 md:w-64 md:h-64 rounded-full overflow-hidden mx-auto border-2 border-black/[0.06] shadow-sm">
+                  <Image
+                    src={s.image}
+                    alt={`Step ${s.step}`}
+                    width={250}
+                    height={250}
+                    className="w-full h-full object-cover scale-[1.18]"
+                  />
+                </div>
+
+                <p className="text-sm sm:text-base font-medium text-gold uppercase tracking-[0.18em] mt-5 mb-2">
+                  Step {s.step}
+                </p>
+
+                <p className="text-xs sm:text-sm text-slate leading-relaxed italic">
+                  {s.description}
+                </p>
+              </div>
+            </ScrollReveal>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
