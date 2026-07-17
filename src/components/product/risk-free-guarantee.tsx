@@ -3,8 +3,8 @@
 import ScrollReveal from "@/components/ui/scroll-reveal";
 
 const guaranteeBullets = [
-  "90-day full refund, starting the day it arrives",
-  "Feel the difference in 14 days, or we make it right",
+  "Feel the difference within 14 days, or send it back any time within 90 days for a full refund",
+  "The 90 days start the day it arrives",
   "2-year warranty: free replacement if it ever stops working",
   "No restocking fee, no questions about why",
   "Keep the bonus guide either way",

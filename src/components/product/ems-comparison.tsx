@@ -72,7 +72,7 @@ export default function EMSComparison() {
               </div>
               <h3 className="text-xl font-heading font-medium text-heading mb-2 text-center md:text-left">Rotating nodes and real heat</h3>
               <p className="text-sm text-slate leading-relaxed mb-4 text-center md:text-left">
-                The two things your muscles actually respond to, the way a therapist's thumbs would, in ten quiet minutes. The last calm thing you do before you unwind, not another gadget you give up on.
+                It works the muscle the way a therapist's thumbs would, in about ten quiet minutes. The last calm thing you do before you unwind, not another gadget you give up on.
               </p>
               <div className="flex items-center gap-2 text-gold justify-center md:justify-start">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>

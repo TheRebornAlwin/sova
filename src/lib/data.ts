@@ -159,7 +159,7 @@ export const faqData: FAQItem[] = [
   {
     question: "What if it doesn't work for me?",
     answer:
-      "You have 90 days. Use it, and if it isn't for you, email us at shopsovarelief@gmail.com for a full refund. Keep the bonus guide either way. No restocking fee, no questions about why.",
+      "Feel the difference within 14 days, or send it back any time within 90 days for a full refund. Just email us at shopsovarelief@gmail.com, and you keep the bonus guide either way. No restocking fee, no questions about why.",
   },
   {
     question: "What if it breaks?",
@@ -214,7 +214,7 @@ export const reviewsData: Review[] = [
     text: "listen. this feels like actual hands, not some cheap buzzing thing. i drape it on after work, lean back, and let it work the knots out. my husband knows when its on to just let me have my ten minutes lol",
   },
   {
-    name: "Marcus L.",
+    name: "Nicole R.",
     rating: 5,
     date: "May 6, 2026",
     text: "you could bounce a quarter off my upper back most days from hunching over a monitor. i was skeptical it would reach anything but the nodes actually dig in, just enough pressure without hurting. genuinely surprised",
@@ -226,7 +226,7 @@ export const reviewsData: Review[] = [
     text: "I used to get a massage maybe twice a year because who can afford it more than that. This is that same worked-over feeling on my own couch whenever I want it. It paid for itself the first week honestly.",
   },
   {
-    name: "Aaron T.",
+    name: "Bethany K.",
     rating: 5,
     date: "Apr 23, 2026",
     text: "i carry every bit of stress in my neck and shoulders and it builds into this tight, heavy feeling by the evening. the heat plus the kneading loosens it before it gets bad now. i reach for it the second i feel my shoulders creeping up",
@@ -244,7 +244,7 @@ export const reviewsData: Review[] = [
     text: "i work from home and by dinner my shoulders are rock hard. fifteen minutes with this and its like someone worked the whole day out of them. the warmth is the part i didnt know i needed",
   },
   {
-    name: "Devon M.",
+    name: "Renata M.",
     rating: 4,
     date: "Apr 4, 2026",
     text: "my old massager had these hard plastic knobs that honestly hurt and pinched. this one is nothing like that, it feels smooth and firm like real thumbs. only reason for 4 stars is i wish the strap was a hair longer. otherwise it does exactly what i wanted",
@@ -268,16 +268,16 @@ export const reviewsData: Review[] = [
     text: "i hold my stress in my shoulders and dont even notice until they ache. the kneading plus the heat loosens it in a way nothing else has. its become the ten minutes of my day that are actually just mine",
   },
   {
-    name: "Ian P.",
+    name: "Claire D.",
     rating: 5,
     date: "Mar 12, 2026",
     text: "first time in ages my shoulders didnt feel like concrete when i woke up. i didnt realize how much tension i was carrying around until this pulled it out",
   },
   {
-    name: "Wade B.",
+    name: "Dana B.",
     rating: 5,
     date: "Mar 5, 2026",
-    text: "i drive long haul and my neck and traps are shot by the end of a run. i throw this on at the truck stop and it kneads the whole thing out. dont know how i went so long without it",
+    text: "i'm on the road for work all day and my neck and traps are shot by the end of it. i throw this on when i finally stop and it kneads the whole thing out. dont know how i went so long without it",
   },
   {
     name: "Olivia D.",
@@ -298,7 +298,7 @@ export const reviewsData: Review[] = [
     text: "I have the worst time unwinding after work, my shoulders just stay up by my ears. This is my nightly ritual now. Drape it on, let it knead, and I can feel my whole body settle.",
   },
   {
-    name: "Ryan P.",
+    name: "Rhea P.",
     rating: 5,
     date: "Feb 8, 2026",
     text: "desk job, so my traps are always tight. this on the medium setting after work is the perfect way to decompress. feels like a real massage without the ninety dollar bill",
@@ -310,13 +310,13 @@ export const reviewsData: Review[] = [
     text: "the tension relief alone is worth it. i sit hunched over a screen ten plus hours a day and this at night is like a spa treatment for my shoulders. the warm kneading feeling is incredible",
   },
   {
-    name: "Marcus A.",
+    name: "Mara A.",
     rating: 5,
     date: "Jan 27, 2026",
     text: "way better than the cheap vibrating pillow i had before. that thing just buzzed on the surface, this actually kneads into the muscle. no comparison. the heat is the real star",
   },
   {
-    name: "Alex R.",
+    name: "Alexa R.",
     rating: 5,
     date: "Jan 21, 2026",
     text: "skeptical at first but this thing is legit. the nodes work in circles just like thumbs and you can literally feel the knot giving way. highly recommend if you carry your tension in your neck",
@@ -328,7 +328,7 @@ export const reviewsData: Review[] = [
     text: "Bought two, one for me and one for my mom. She's obsessed. The heat is genuinely soothing and the intensity levels actually feel different. Great quality for the price.",
   },
   {
-    name: "James C.",
+    name: "Jenna C.",
     rating: 5,
     date: "Jan 9, 2026",
     text: "got this because my shoulders were constantly tight from stress and my roommate ordered one the day after trying mine. we both use them every evening now. best purchase of the year easily",
@@ -346,7 +346,7 @@ export const reviewsData: Review[] = [
     text: "I carry all my stress in my neck and shoulders and this has genuinely changed my evenings. the kneading is so good for releasing the knots. best thing I've bought for myself this year honestly",
   },
   {
-    name: "Jordan B.",
+    name: "Jordyn B.",
     rating: 4,
     date: "Dec 22, 2025",
     text: "great device for the price. the heat and kneading combo really works the tension out. only giving 4 stars because shipping took a little longer than i expected but the product itself is 5/5",
@@ -358,7 +358,7 @@ export const reviewsData: Review[] = [
     text: "perfect for my evening wind down. i drape it on, heat on, medium speed, and within ten minutes my shoulders have dropped from around my ears. the auto shutoff means i never have to think about it. absolute essential now",
   },
   {
-    name: "Tom H.",
+    name: "Toni H.",
     rating: 5,
     date: "Dec 10, 2025",
     text: "replaced my cheap vibrating one with this and its night and day. that one just buzzed, this actually kneads and reaches the deep spots. finally something that gets the knots out",
@@ -376,7 +376,7 @@ export const reviewsData: Review[] = [
     text: "My husband and I both use one now. He was the skeptic but after trying mine he ordered his own within a week. We both hold our stress in our shoulders and this is the fix.",
   },
   {
-    name: "Carlos V.",
+    name: "Carla V.",
     rating: 5,
     date: "Nov 21, 2025",
     text: "i was worried it would be some cheap gimmick but its actually really well built. the nodes feel firm and smooth, not hard and pinchy like the last one i had. feels like a warm massage at a spa",
@@ -388,7 +388,7 @@ export const reviewsData: Review[] = [
     text: "Perfect gift for my sister who's a new mom and hasn't had a minute to herself. She says the ten minutes with this is the most relaxed she feels all day.",
   },
   {
-    name: "Brandon W.",
+    name: "Brooke W.",
     rating: 4,
     date: "Nov 9, 2025",
     text: "solid product. really works the tension out of my shoulders before bed. my only minor complaint is i wish it had one more intensity level, but the ones it has are great. heat and kneading are excellent",
@@ -424,7 +424,7 @@ export const reviewsData: Review[] = [
     text: "I'm a massage therapist and I tell clients to keep something at home between visits. Having an affordable kneading device with real heat like this is excellent. The quality genuinely impressed me.",
   },
   {
-    name: "Ethan G.",
+    name: "Elena G.",
     rating: 5,
     date: "Oct 4, 2025",
     text: "i travel a lot for work and my neck is wrecked from planes and hotel pillows. this is in my carry on now. throw it on in the room and the tension is gone. the travel pouch is a nice touch",
@@ -471,13 +471,13 @@ export const reviewStats = (() => {
 // full review history isn't all rendered on the page; only a curated set of
 // cards above is. Distribution sums to `count` and averages ~4.9.
 export const reviewDisplay = {
-  count: 2347,
+  count: 1241,
   avg: 4.9,
   dist: [
-    { stars: 5, count: 2160 },
-    { stars: 4, count: 130 },
-    { stars: 3, count: 35 },
-    { stars: 2, count: 14 },
-    { stars: 1, count: 8 },
+    { stars: 5, count: 1150 },
+    { stars: 4, count: 68 },
+    { stars: 3, count: 15 },
+    { stars: 2, count: 5 },
+    { stars: 1, count: 3 },
   ],
 };

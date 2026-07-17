@@ -268,7 +268,7 @@ export default function ProductPageClient({ product }: { product: Product }) {
           {/* PRODUCT INFO */}
           <div>
             <h1 className="font-heading text-3xl md:text-4xl lg:text-[42px] font-medium text-heading leading-tight">
-              <BrandName tm /> {product.title}
+              <BrandName /> {product.title}
             </h1>
             <p className="mt-2 text-slate italic">{product.tagline}</p>
 
@@ -331,9 +331,11 @@ export default function ProductPageClient({ product }: { product: Product }) {
                 therapist would, with no appointment and no $90 bill.
               </p>
               <p className="mt-2 text-sm text-slate leading-relaxed">
-                Not feeling it in two weeks? You&apos;ve got{" "}
-                <span className="font-medium text-heading">ninety days</span> to send
-                it back for every cent, and you keep the guide either way.
+                Feel the difference within{" "}
+                <span className="font-medium text-heading">14 days</span>, or send it
+                back any time within{" "}
+                <span className="font-medium text-heading">90 days</span> for a full
+                refund. You keep the guide either way.
               </p>
             </div>
 

@@ -17,7 +17,7 @@ const features = [
   },
   {
     title: "Real, soothing heat",
-    body: "Gentle warmth loosens the muscle while it kneads, so the knot lets go instead of fighting back. It's the part people say they didn't know they needed.",
+    body: "Gentle warmth loosens the muscle while it kneads, so the knot lets go instead of fighting back. Most people don't expect the heat to matter this much, until they feel it.",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
         <path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z" />
