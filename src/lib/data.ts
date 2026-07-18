@@ -49,18 +49,10 @@ export const heroProduct: Product = {
     "By the end of the day your shoulders are up around your ears and the knot at the base of your neck won't budge. Nuro works it out the way a real massage therapist would, with rotating nodes that actually knead the muscle and gentle heat that helps it let go. You feel the tension start to release, your shoulders come down, and the day finally leaves your body. It's that real-hands feeling, at home, whenever you need it.",
   price: 79.99,
   compareAtPrice: 159.99,
+  // Only the real product shot for now. Add more angles here (nuro-2.webp, etc.)
+  // as they're ready and the gallery/thumbnails expand automatically.
   images: [
     "/products/nuro-1.webp",
-    "/products/nuro-2.webp",
-    "/products/nuro-3.webp",
-    "/products/nuro-4.webp",
-    "/products/nuro-5.webp",
-    "/products/nuro-6.webp",
-    "/products/nuro-7.webp",
-    "/products/nuro-8.webp",
-    "/products/nuro-9.webp",
-    "/products/nuro-10.webp",
-    "/products/nuro-11.webp",
   ],
   features: [
     {
