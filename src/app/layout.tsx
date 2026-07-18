@@ -51,7 +51,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Meta Pixel — replace SOVA_META_PIXEL_ID with your real Pixel/Dataset ID */}
+        {/* Meta Pixel — Sova live Pixel/Dataset ID */}
         <script
           dangerouslySetInnerHTML={{
             __html: `!function(f,b,e,v,n,t,s)
@@ -62,13 +62,13 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', 'SOVA_META_PIXEL_ID');
+fbq('init', '2209407996525613');
 fbq('track', 'PageView');`,
           }}
         />
         <noscript
           dangerouslySetInnerHTML={{
-            __html: `<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=SOVA_META_PIXEL_ID&ev=PageView&noscript=1" alt=""/>`,
+            __html: `<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=2209407996525613&ev=PageView&noscript=1" alt=""/>`,
           }}
         />
         {/* Microsoft Clarity — replace SOVA_CLARITY_ID with your real project ID */}
