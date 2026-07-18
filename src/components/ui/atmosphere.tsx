@@ -27,10 +27,11 @@ export default function Atmosphere() {
         <div className="atmosphere-vignette absolute inset-0" />
       </div>
 
-      {/* Fine warm grain, above content (decorative, never blocks clicks) */}
+      {/* Fine warm grain, above content (decorative, never blocks clicks).
+          Hidden on phones: a fixed blend-mode overlay can cost scroll smoothness. */}
       <div
         aria-hidden
-        className="atmosphere-grain fixed inset-0 z-[100] pointer-events-none"
+        className="atmosphere-grain fixed inset-0 z-[100] pointer-events-none hidden md:block"
       />
     </>
   );

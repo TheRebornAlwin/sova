@@ -55,7 +55,7 @@ export default function ClientLayout({
       <div className="relative z-10">
         <AnnouncementBar />
         <Header />
-        <main className="min-h-screen pt-[calc(36px+64px)]">{children}</main>
+        <main className="min-h-screen pt-[calc(36px+64px)] overflow-x-clip md:overflow-x-visible">{children}</main>
         <Footer />
       </div>
       <CartDrawer />

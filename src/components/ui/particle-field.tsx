@@ -21,6 +21,10 @@ export default function ParticleField() {
     const reduceMotion =
       typeof window !== "undefined" &&
       window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
+    // On phones, paint a single static frame instead of running an animation
+    // loop, so scrolling stays perfectly smooth and battery-friendly.
+    const isMobile =
+      typeof window !== "undefined" && window.innerWidth < 768;
 
     const dpr = Math.min(window.devicePixelRatio, 1.5);
 
@@ -121,7 +125,7 @@ export default function ParticleField() {
       });
     };
 
-    if (reduceMotion) {
+    if (reduceMotion || isMobile) {
       paint();
       return () => window.removeEventListener("resize", resize);
     }
