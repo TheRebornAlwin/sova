@@ -55,7 +55,7 @@ export default function Header() {
         id: "nuro",
         title: "Nuro",
         price: 79.99,
-        image: "/products/nuro-1.webp",
+        image: "/products/nuro-main-v2.webp",
       },
       1
     );
