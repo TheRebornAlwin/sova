@@ -6,7 +6,8 @@
 // SAVE20 (20% off). If they don't exist, Shopify silently ignores the code and
 // multi-pack buyers are charged full price per unit.
 
-const SHOPIFY_DOMAIN = "z0asix-40.myshopify.com";
+// Branded Shopify checkout domain (custom subdomain mapped to the Shopify store).
+const SHOPIFY_DOMAIN = "shop.sovarelief.com";
 
 // Shopify variant IDs (from the product's variants[].id).
 const VARIANT_IDS: Record<string, string> = {
@@ -22,7 +23,7 @@ interface CartItem {
 }
 
 // Builds a Shopify cart permalink, e.g.
-//   https://z0asix-40.myshopify.com/cart/59636104626462:2?discount=SAVE10
+//   https://shop.sovarelief.com/cart/59636104626462:2?discount=SAVE10
 // which drops the shopper straight into Shopify's cart/checkout with the right
 // items and the matching bundle discount.
 export function createCheckout(items: CartItem[]): string {
