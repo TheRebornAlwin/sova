@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import ScrollReveal from "@/components/ui/scroll-reveal";
 import MagneticButton from "@/components/ui/magnetic-button";
-import { useCart, PROTECTION_PLAN } from "@/contexts/cart-context";
+import { useCart } from "@/contexts/cart-context";
 import { createCheckout } from "@/lib/shopify";
 
 export default function CartPage() {
@@ -13,14 +13,12 @@ export default function CartPage() {
     removeItem,
     updateQuantity,
     total,
-    protectionPlan,
-    setProtectionPlan,
     unitPrice,
     lineDiscount,
   } = useCart();
 
   const handleCheckout = () => {
-    window.location.href = createCheckout(items, protectionPlan);
+    window.location.href = createCheckout(items);
   };
 
   return (
@@ -106,37 +104,6 @@ export default function CartPage() {
                   </div>
                 </div>
               ))}
-
-              <label className="flex items-start gap-3 cursor-pointer glass-card rounded-2xl p-4 border border-gold/20">
-                <input
-                  type="checkbox"
-                  checked={protectionPlan}
-                  onChange={(e) => setProtectionPlan(e.target.checked)}
-                  className="sr-only"
-                />
-                <span
-                  className={`mt-0.5 w-5 h-5 rounded-md border-2 flex items-center justify-center flex-shrink-0 transition-all ${
-                    protectionPlan ? "border-gold bg-gold" : "border-muted"
-                  }`}
-                >
-                  {protectionPlan && (
-                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
-                  )}
-                </span>
-                <span className="flex-1 min-w-0">
-                  <span className="flex items-baseline justify-between gap-3">
-                    <span className="text-sm font-semibold text-heading">
-                      {PROTECTION_PLAN.title}
-                    </span>
-                    <span className="text-sm font-bold text-gold flex-shrink-0">
-                      +${PROTECTION_PLAN.price.toFixed(2)}
-                    </span>
-                  </span>
-                  <span className="block text-xs text-slate leading-snug mt-1">
-                    Covers accidental damage for 3 years. One free replacement, no questions.
-                  </span>
-                </span>
-              </label>
 
               <div className="glass-card rounded-2xl p-6">
                 <div className="flex items-center justify-between mb-1">
