@@ -27,10 +27,11 @@ export const metadata: Metadata = {
   title: "Sova | Premium At-Home Tension Release",
   description:
     "The Nuro is a heated shiatsu kneading massager that works the knots out of your neck and shoulders like a real massage therapist's hands. Real relief at home, whenever you need it.",
-  // TODO: drop a real favicon at /public/favicon.ico (and an Open Graph image at
-  // /public/og-image.png) then confirm the paths below.
+  // Favicon is versioned (-v2) to bust the browser/CDN cache when replaced.
   icons: {
-    icon: "/favicon.ico",
+    icon: "/favicon-v2.ico",
+    shortcut: "/favicon-v2.ico",
+    apple: "/favicon-v2.ico",
   },
   openGraph: {
     title: "Sova | Premium At-Home Tension Release",
