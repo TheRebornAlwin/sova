@@ -32,7 +32,7 @@ export default function SeeItWork() {
           <ScrollReveal className="min-w-0 md:order-last">
             <div className="relative aspect-square rounded-3xl overflow-hidden border border-black/[0.06] shadow-lg group">
               <Image
-                src="/products/nuro-demo.webp"
+                src="/products/nuro-demo-v2.webp"
                 alt="The Nuro kneading the neck and shoulders in real time"
                 width={700}
                 height={700}
