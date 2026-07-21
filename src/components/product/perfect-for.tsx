@@ -26,7 +26,7 @@ export default function PerfectFor() {
           <ScrollReveal className="min-w-0">
             <div className="aspect-square rounded-3xl overflow-hidden border border-black/[0.06] shadow-lg">
               <Image
-                src="/products/nuro-who-its-for.webp"
+                src="/products/nuro-who-its-for-v2.webp"
                 alt="Who the Nuro is for"
                 width={700}
                 height={700}
