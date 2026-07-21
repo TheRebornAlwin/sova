@@ -42,7 +42,7 @@ export default function BenefitsHero() {
           <ScrollReveal delay={0.1}>
             <div className="relative aspect-square rounded-3xl overflow-hidden border border-black/[0.06] shadow-lg">
               <Image
-                src="/products/nuro-benefits.webp"
+                src="/products/nuro-benefits-v2.webp"
                 alt="Nuro heated shiatsu neck and shoulder massager"
                 width={700}
                 height={700}
