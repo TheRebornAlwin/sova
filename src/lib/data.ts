@@ -57,6 +57,7 @@ export const heroProduct: Product = {
     "/products/nuro-2-v2.webp",
     "/products/nuro-3-v2.webp",
     "/products/nuro-4-v2.webp",
+    "/products/nuro-5-v2.webp",
   ],
   features: [
     {
