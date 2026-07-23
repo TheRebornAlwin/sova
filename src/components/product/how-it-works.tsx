@@ -11,7 +11,7 @@ const steps = [
   },
   {
     step: 2,
-    image: "/products/nuro-step2.webp",
+    image: "/products/nuro-step2-v2.webp",
     description: "Press the button and pick your heat and speed, then dial it in to whatever your shoulders need tonight.",
   },
   {
