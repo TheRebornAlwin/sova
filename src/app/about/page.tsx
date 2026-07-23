@@ -39,7 +39,7 @@ export default function AboutPage() {
         <ScrollReveal>
           <div className="relative aspect-[16/9] rounded-3xl overflow-hidden border border-black/[0.06] shadow-lg mb-14 bg-gradient-to-br from-gold-light/30 to-surface flex items-center justify-center">
             <Image
-              src="/products/nuro-about.webp"
+              src="/products/nuro-benefits-v2.webp"
               alt="The Nuro by Sova"
               width={900}
               height={506}
