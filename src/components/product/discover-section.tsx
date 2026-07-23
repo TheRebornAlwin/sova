@@ -19,7 +19,7 @@ export default function DiscoverSection() {
           <ScrollReveal className="min-w-0">
             <div className="aspect-square rounded-3xl overflow-hidden border border-black/[0.06] shadow-lg">
               <Image
-                src="/products/nuro-lifestyle.webp"
+                src="/products/nuro-lifestyle-v2.webp"
                 alt="A calm evening with the Nuro by Sova"
                 width={700}
                 height={700}
