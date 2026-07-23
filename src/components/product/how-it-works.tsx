@@ -16,7 +16,7 @@ const steps = [
   },
   {
     step: 3,
-    image: "/products/nuro-step3.webp",
+    image: "/products/nuro-step3-v2.webp",
     description: "Lean back and let it knead. Ten minutes and you can feel the day start to leave your body.",
   },
 ];
