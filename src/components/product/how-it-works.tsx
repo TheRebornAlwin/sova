@@ -6,7 +6,7 @@ import ScrollReveal from "@/components/ui/scroll-reveal";
 const steps = [
   {
     step: 1,
-    image: "/products/nuro-step1.webp",
+    image: "/products/nuro-step1-v2.webp",
     description: "Drape the Nuro over your neck and shoulders and let it settle where the tension sits.",
   },
   {
