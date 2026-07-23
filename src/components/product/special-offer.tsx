@@ -76,7 +76,7 @@ export default function SpecialOffer() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5 items-center w-full">
             <div className="rounded-3xl overflow-hidden border border-black/[0.06] shadow-lg w-full md:max-w-[60%] md:mx-auto">
               <Image
-                src="/products/nuro-whats-included-1.webp"
+                src="/products/nuro-4-v2.webp"
                 alt="The Nuro massager and the 10-Minute Reset Guide"
                 width={1200}
                 height={1200}
@@ -85,7 +85,7 @@ export default function SpecialOffer() {
             </div>
             <div className="rounded-3xl overflow-hidden border border-black/[0.06] shadow-lg">
               <Image
-                src="/products/nuro-whats-included-2.webp"
+                src="/products/nuro-5-v2.webp"
                 alt="Everything included: free shipping, the bonus guide, and the 90-day guarantee"
                 width={1200}
                 height={900}
