@@ -9,7 +9,6 @@ import BrandName from "@/components/ui/brand-name";
 
 const navLinks = [
   { href: "/home/", label: "Home" },
-  { href: "/about/", label: "About" },
   { href: "/faq/", label: "FAQ" },
   { href: "/contact/", label: "Contact" },
 ];

@@ -38,8 +38,8 @@ export default function BrandStory() {
               feeling at home, for the price of a single visit, whenever you want it.
             </p>
             <div className="flex justify-center md:justify-start">
-              <MagneticButton variant="secondary" href="/about/">
-                Read Our Full Story
+              <MagneticButton variant="secondary" href="/products/nuro/">
+                Shop the Nuro
               </MagneticButton>
             </div>
           </ScrollReveal>
