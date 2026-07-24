@@ -7,7 +7,7 @@ const benefits = [
   "Work the knot loose at the base of your neck, the one you can never reach",
   "Ease the tightness across your shoulders before it turns into a headache",
   "Feel your shoulders drop down from around your ears",
-  "Get that massage-therapist feeling without the $90 and the appointment",
+  "Get that massage-therapist feeling without the $90 and the appointment, each time",
   "End the day loose and calm instead of wound up",
 ];
 

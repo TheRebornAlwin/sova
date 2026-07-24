@@ -15,7 +15,7 @@ const bulletPoints = [
 const benefitBullets = [
   "Real relief from your own couch, whenever you need it",
   "No appointment, no $90 bill, nothing to subscribe to",
-  "The deep knot kneaded loose, not just poked at",
+  "The deep knot kneaded loose",
 ];
 
 export default function PerfectFor() {

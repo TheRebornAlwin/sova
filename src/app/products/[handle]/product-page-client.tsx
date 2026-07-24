@@ -31,7 +31,7 @@ import PurchaseNotification from "@/components/product/purchase-notification";
 const benefitBadges = [
   {
     label: "Real kneading",
-    sub: "Not a buzz",
+    sub: "For relaxation",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><circle cx="8" cy="9" r="1.6"/><circle cx="16" cy="9" r="1.6"/><circle cx="8" cy="15" r="1.6"/><circle cx="16" cy="15" r="1.6"/></svg>
     ),
@@ -55,7 +55,7 @@ const benefitBadges = [
 const coreBenefits = [
   "Work the knot out of your neck and shoulders like real hands",
   "Feel your shoulders finally come down from around your ears",
-  "Get that massage feeling at home, without the $90 or the appointment",
+  "Get that massage feeling at home, without the $90 each session",
   "End the day loose instead of carrying it all in your shoulders",
 ];
 
@@ -333,11 +333,9 @@ export default function ProductPageClient({ product }: { product: Product }) {
                 therapist would, with no appointment and no $90 bill.
               </p>
               <p className="mt-2 text-sm text-slate leading-relaxed">
-                Feel the difference within{" "}
-                <span className="font-medium text-heading">14 days</span>, or send it
-                back any time within{" "}
+                Feel the difference tonight, or send it back any time within{" "}
                 <span className="font-medium text-heading">90 days</span> for a full
-                refund. You keep the guide either way.
+                refund.
               </p>
             </div>
 

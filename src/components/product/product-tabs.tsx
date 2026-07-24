@@ -104,7 +104,7 @@ export default function ProductTabs({ product }: { product: Product }) {
               that starts the day it arrives.
             </p>
             <p>
-              Feel the difference in 14 days or we make it right. No restocking fee,
+              Feel the difference in 90 days or we make it right. No restocking fee,
               no questions about why, and you keep the bonus guide either way.
             </p>
             <p>

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { reviewsData, reviewDisplay } from "@/lib/data";
 import ScrollReveal from "@/components/ui/scroll-reveal";
 import TextGradient from "@/components/ui/text-gradient";
@@ -120,17 +120,18 @@ export default function ProductReviews() {
           </div>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <AnimatePresence mode="popLayout">
-            {displayedReviews.map((review, i) => (
-              <motion.div
-                key={`${review.name}-${i}`}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: (i % REVIEWS_PER_PAGE) * 0.05 }}
-                className="min-w-0"
-              >
-                <div className="bg-surface-raised border border-black/[0.06] rounded-2xl p-5 h-full transition-all duration-300 hover:border-black/10 hover:shadow-sm">
+        {/* Masonry columns so reviews keep their natural height, some short,
+            some long, instead of every card stretching to match its row. */}
+        <div className="columns-1 md:columns-2 gap-4 [column-fill:balance]">
+          {displayedReviews.map((review, i) => (
+            <motion.div
+              key={`${review.name}-${i}`}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: (i % REVIEWS_PER_PAGE) * 0.04 }}
+              className="mb-4 break-inside-avoid"
+            >
+                <div className="bg-surface-raised border border-black/[0.06] rounded-2xl p-5 transition-all duration-300 hover:border-black/10 hover:shadow-sm">
                   <div className="flex items-start gap-3 mb-3">
                     <ReviewAvatar name={review.name} />
                     <div className="flex-1 min-w-0">
@@ -152,7 +153,7 @@ export default function ProductReviews() {
                           >
                             <polyline points="20 6 9 17 4 12" />
                           </svg>
-                          Verified
+                          Verified Purchase
                         </span>
                       </div>
                       <div className="flex items-center gap-2 mt-0.5">
@@ -167,9 +168,8 @@ export default function ProductReviews() {
                     {review.text}
                   </p>
                 </div>
-              </motion.div>
-            ))}
-          </AnimatePresence>
+            </motion.div>
+          ))}
         </div>
 
         {canShowMore ? (

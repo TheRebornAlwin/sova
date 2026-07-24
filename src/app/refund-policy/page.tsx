@@ -21,7 +21,7 @@ export default function RefundPolicyPage() {
               <h2 className="font-heading text-lg font-bold text-heading mb-2">90-Day Money-Back Guarantee</h2>
               <p>
                 You have 90 days from the date of delivery to request a return and full
-                refund. Feel the difference in 14 days or we make it right, and you keep
+                refund. Feel the difference in 90 days or we make it right, and you keep
                 the bonus guide either way. The Nuro is also covered by a 2-year
                 warranty, so if it ever stops working we replace it free.
               </p>

@@ -19,8 +19,8 @@ export default function MidPageCTA() {
             </a>
           </div>
           <p className="mt-5 text-sm text-lavender">
-            Free US shipping, and you can feel the difference within 14 days or send it
-            back any time within 90 days for a full refund.
+            Free US shipping, and you can send it back any time within 90 days for a
+            full refund.
           </p>
         </div>
       </ScrollReveal>

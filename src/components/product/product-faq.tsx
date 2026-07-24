@@ -33,7 +33,7 @@ const faqItems = [
   {
     question: "What if it doesn't work for me?",
     answer:
-      "Then you send it back, simple as that. Feel the difference within 14 days, or send it back any time within 90 days for a full refund. Email us at shopsovarelief@gmail.com and you keep the bonus guide either way, with no restocking fee and no questions about why.",
+      "Then you send it back, simple as that. You've got a full 90 days to send it back for a refund of every cent. Email us at shopsovarelief@gmail.com and you keep the bonus guide either way, with no restocking fee and no questions about why.",
   },
 ];
 

@@ -12,7 +12,7 @@ const values = [
     ),
     title: "Real kneading, not a buzz",
     description:
-      "Rotating nodes work the muscle in slow circles, the way a therapist's thumbs do. Your body responds to that, not to a cheap gadget shaking on the surface.",
+      "Rotating nodes work the muscle in slow circles, the way a therapist does. Your body responds to that, not to a cheap gadget shaking on the surface.",
   },
   {
     icon: (
