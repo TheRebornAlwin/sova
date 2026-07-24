@@ -6,18 +6,37 @@ import TextGradient from "@/components/ui/text-gradient";
 import GlassmorphismCard from "@/components/ui/glassmorphism-card";
 import MagneticButton from "@/components/ui/magnetic-button";
 
+const FORMSPARK_ACTION = "https://submit-form.com/4yLutbUln";
+
 const infoCards = [
   { icon: "✉", label: "Email", value: "shopsovarelief@gmail.com" },
-  { icon: "🕐", label: "Hours", value: "Mon-Fri 9am-5pm EST" },
+  { icon: "🕐", label: "Hours", value: "Monday-Sunday, 24/7" },
   { icon: "⚡", label: "Response Time", value: "Within 24 hours" },
 ];
 
 export default function ContactPage() {
-  const [sent, setSent] = useState(false);
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSent(true);
+    const form = e.currentTarget;
+    const data = Object.fromEntries(new FormData(form).entries());
+    setStatus("sending");
+    try {
+      const res = await fetch(FORMSPARK_ACTION, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+      if (!res.ok) throw new Error("bad response");
+      setStatus("sent");
+      form.reset();
+    } catch {
+      setStatus("error");
+    }
   };
 
   return (
@@ -54,38 +73,70 @@ export default function ContactPage() {
             <h2 className="font-heading text-xl font-bold text-heading mb-6 text-center md:text-left">
               Send us a message
             </h2>
-            {sent ? (
+            {status === "sent" ? (
               <p className="text-slate text-center py-8">
                 Thanks, we&apos;ve got your message and will be back to you within 24 hours.
               </p>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-4">
+              <form
+                action={FORMSPARK_ACTION}
+                method="POST"
+                onSubmit={handleSubmit}
+                className="space-y-4"
+              >
                 <div>
-                  <label className="block text-sm font-medium text-heading mb-1.5">Name</label>
+                  <label htmlFor="name" className="block text-sm font-medium text-heading mb-1.5">
+                    Name
+                  </label>
                   <input
+                    id="name"
+                    name="name"
                     type="text"
+                    required
                     placeholder="Your name"
                     className="w-full rounded-xl bg-surface-raised border border-black/[0.08] px-4 py-3 text-sm text-foreground placeholder:text-muted focus:outline-none focus:border-gold"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-heading mb-1.5">Email</label>
+                  <label htmlFor="email" className="block text-sm font-medium text-heading mb-1.5">
+                    Email
+                  </label>
                   <input
+                    id="email"
+                    name="email"
                     type="email"
+                    required
                     placeholder="your@email.com"
                     className="w-full rounded-xl bg-surface-raised border border-black/[0.08] px-4 py-3 text-sm text-foreground placeholder:text-muted focus:outline-none focus:border-gold"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-heading mb-1.5">Message</label>
+                  <label htmlFor="message" className="block text-sm font-medium text-heading mb-1.5">
+                    Message
+                  </label>
                   <textarea
+                    id="message"
+                    name="message"
+                    required
                     rows={5}
                     placeholder="How can we help?"
                     className="w-full rounded-xl bg-surface-raised border border-black/[0.08] px-4 py-3 text-sm text-foreground placeholder:text-muted focus:outline-none focus:border-gold resize-none"
                   />
                 </div>
-                <MagneticButton variant="primary" size="lg" type="submit" className="w-full">
-                  Send Message
+                {status === "error" && (
+                  <p className="text-sm text-red-500">
+                    Something went wrong sending that. Please try again, or email us at
+                    shopsovarelief@gmail.com.
+                  </p>
+                )}
+                <MagneticButton
+                  variant="primary"
+                  size="lg"
+                  type="submit"
+                  className="w-full"
+                  disabled={status === "sending"}
+                >
+                  {status === "sending" ? "Sending..." : "Send Message"}
                 </MagneticButton>
               </form>
             )}
