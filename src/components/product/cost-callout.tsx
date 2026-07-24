@@ -4,7 +4,7 @@ import ScrollReveal from "@/components/ui/scroll-reveal";
 
 export default function CostCallout() {
   return (
-    <section className="py-16 md:py-20 px-6">
+    <section className="py-16 md:py-20 px-6 cv-section">
       <ScrollReveal>
         <div className="max-w-4xl mx-auto relative rounded-3xl overflow-hidden">
           {/* Gradient background */}

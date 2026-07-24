@@ -54,7 +54,7 @@ const features = [
 
 export default function FeaturesLove() {
   return (
-    <section className="py-20 md:py-28 px-6 bg-background">
+    <section className="py-20 md:py-28 px-6 bg-background cv-section">
       <div className="max-w-5xl mx-auto">
         <ScrollReveal>
           <div className="text-center mb-14">

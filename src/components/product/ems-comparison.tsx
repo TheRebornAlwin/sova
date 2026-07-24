@@ -4,7 +4,7 @@ import ScrollReveal from "@/components/ui/scroll-reveal";
 
 export default function EMSComparison() {
   return (
-    <section className="py-20 md:py-28 px-6 bg-surface">
+    <section className="py-20 md:py-28 px-6 bg-surface cv-section">
       <div className="max-w-5xl mx-auto">
         <ScrollReveal>
           <div className="text-center mb-14">

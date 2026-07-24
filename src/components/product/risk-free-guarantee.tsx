@@ -13,7 +13,7 @@ const guaranteeBullets = [
 
 export default function RiskFreeGuarantee() {
   return (
-    <section className="relative py-20 md:py-28 px-6 bg-surface section-glow-gold">
+    <section className="relative py-20 md:py-28 px-6 bg-surface section-glow-gold cv-section">
       <div className="relative max-w-3xl mx-auto">
         <ScrollReveal>
           <div className="text-center">

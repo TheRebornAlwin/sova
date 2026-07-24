@@ -64,7 +64,7 @@ export default function ParticleField() {
       Math.random() > 0.55 ? "amber" : Math.random() > 0.5 ? "cream" : "lavender";
 
     // Fine drifting motes
-    for (let i = 0; i < 30; i++) {
+    for (let i = 0; i < 20; i++) {
       particles.push({
         x: Math.random() * window.innerWidth,
         y: Math.random() * window.innerHeight,
@@ -134,7 +134,7 @@ export default function ParticleField() {
     let animId: number;
     const draw = () => {
       frame++;
-      if (frame % 3 !== 0) {
+      if (frame % 4 !== 0) {
         animId = requestAnimationFrame(draw);
         return;
       }

@@ -317,6 +317,35 @@ body {
   background: rgba(138,154,130,0.55);
 }
 
+/* ── Performance ─────────────────────────────────────────────── */
+
+/* Skip rendering/layout of offscreen sections until they're near the
+   viewport. Huge win on a long landing page, on both desktop and mobile.
+   The intrinsic size keeps the scrollbar stable so nothing jumps. */
+.cv-section {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 900px;
+}
+
+/* On phones, backdrop-filter blur (header + every glass card) is a major
+   paint/scroll cost. On this light theme a solid translucent background is
+   visually indistinguishable, so drop the blur on small screens. */
+@media (max-width: 767px) {
+  .glass-card {
+    backdrop-filter: none;
+    background: rgba(255, 255, 255, 0.92);
+  }
+  .glass-card-hover:hover {
+    backdrop-filter: none;
+  }
+  /* Freeze the big blurred atmosphere layers on mobile (they drift almost
+     imperceptibly but cost continuous GPU compositing while scrolling). */
+  .atmosphere-lamp,
+  .atmosphere-aurora {
+    animation: none !important;
+  }
+}
+
 /* Respect people who'd rather not have motion */
 @media (prefers-reduced-motion: reduce) {
   .atmosphere-lamp,

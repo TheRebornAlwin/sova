@@ -13,7 +13,7 @@ const benefits = [
 
 export default function BenefitsHero() {
   return (
-    <section className="py-20 md:py-28 px-6 bg-surface">
+    <section className="py-20 md:py-28 px-6 bg-surface cv-section">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 lg:gap-16 items-center">
         {/* Text */}
         <div className="text-center md:text-left order-2 md:order-1">

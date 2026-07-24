@@ -47,7 +47,7 @@ const painPoints = [
 
 export default function ReliefIntro() {
   return (
-    <section className="py-20 md:py-28 px-6 bg-surface section-glow-purple">
+    <section className="py-20 md:py-28 px-6 bg-surface section-glow-purple cv-section">
       <div className="max-w-4xl mx-auto">
         <ScrollReveal>
           <div className="text-center mb-12">

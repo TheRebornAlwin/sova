@@ -45,7 +45,7 @@ export default function ProductFAQ() {
   };
 
   return (
-    <section className="py-20 md:py-28 px-6 bg-background section-glow-gold">
+    <section className="py-20 md:py-28 px-6 bg-background section-glow-gold cv-section">
       <div className="max-w-3xl mx-auto">
         <ScrollReveal>
           <div className="text-center mb-14">

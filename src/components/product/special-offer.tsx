@@ -37,7 +37,7 @@ const offerItems = [
 
 export default function SpecialOffer() {
   return (
-    <section className="py-20 md:py-28 px-6 bg-surface section-glow-gold">
+    <section className="py-20 md:py-28 px-6 bg-surface section-glow-gold cv-section">
       <div className="max-w-6xl mx-auto">
         <ScrollReveal>
           <div className="text-center mb-14">
@@ -73,23 +73,25 @@ export default function SpecialOffer() {
         </ScrollReveal>
 
         <ScrollReveal>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5 items-center w-full">
-            <div className="rounded-3xl overflow-hidden border border-black/[0.06] shadow-lg w-full md:max-w-[60%] md:mx-auto">
+          <div className="grid grid-cols-2 gap-4 md:gap-5 items-stretch w-full max-w-3xl mx-auto">
+            <div className="aspect-square rounded-3xl overflow-hidden border border-black/[0.06] shadow-lg">
               <Image
-                src="/products/nuro-4-v2.webp"
-                alt="The Nuro massager and the 10-Minute Reset Guide"
-                width={1200}
-                height={1200}
-                className="w-full h-auto object-cover"
+                src="/products/nuro-main-v2.webp"
+                alt="The Nuro heated shiatsu neck and shoulder massager"
+                width={1254}
+                height={1254}
+                loading="lazy"
+                className="w-full h-full object-cover"
               />
             </div>
-            <div className="rounded-3xl overflow-hidden border border-black/[0.06] shadow-lg">
+            <div className="aspect-square rounded-3xl overflow-hidden border border-black/[0.06] shadow-lg">
               <Image
-                src="/products/nuro-5-v2.webp"
-                alt="Everything included: free shipping, the bonus guide, and the 90-day guarantee"
-                width={1200}
-                height={900}
-                className="w-full h-auto object-cover"
+                src="/products/nuro-2-v2.webp"
+                alt="Everything included with the Nuro, free with every order"
+                width={1254}
+                height={1254}
+                loading="lazy"
+                className="w-full h-full object-cover"
               />
             </div>
           </div>

@@ -4,7 +4,7 @@ import ScrollReveal from "@/components/ui/scroll-reveal";
 
 export default function MidPageCTA() {
   return (
-    <section className="px-6 py-20 md:py-28 bg-gradient-to-b from-background via-surface to-background">
+    <section className="px-6 py-20 md:py-28 bg-gradient-to-b from-background via-surface to-background cv-section">
       <ScrollReveal>
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="font-heading text-3xl md:text-[40px] font-normal leading-tight text-heading">

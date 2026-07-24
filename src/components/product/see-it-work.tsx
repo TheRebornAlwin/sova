@@ -26,7 +26,7 @@ const signals = [
 
 export default function SeeItWork() {
   return (
-    <section className="py-20 md:py-28 px-6 bg-surface section-glow-gold">
+    <section className="py-20 md:py-28 px-6 bg-surface section-glow-gold cv-section">
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
           <ScrollReveal className="min-w-0 md:order-last">

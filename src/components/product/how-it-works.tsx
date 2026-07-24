@@ -23,7 +23,7 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section className="py-20 md:py-28 px-6 bg-background section-glow-purple">
+    <section className="py-20 md:py-28 px-6 bg-background section-glow-purple cv-section">
       <div className="max-w-4xl mx-auto">
         <ScrollReveal>
           <div className="text-center mb-14">

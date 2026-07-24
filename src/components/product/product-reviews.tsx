@@ -57,7 +57,7 @@ export default function ProductReviews() {
   const remainingReviews = totalReviews - maxReviews;
 
   return (
-    <section className="py-24 md:py-36 px-6 bg-background">
+    <section className="py-24 md:py-36 px-6 bg-background cv-section">
       <div className="max-w-5xl mx-auto">
         <ScrollReveal>
           <div className="text-center mb-12">
