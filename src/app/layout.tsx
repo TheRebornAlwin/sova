@@ -3,16 +3,23 @@ import { Fraunces, Inter } from "next/font/google";
 import "./globals.css";
 import ClientLayout from "./client-layout";
 
+// preload: false so the fonts don't compete with the LCP product image on slow
+// connections (they were preloading ahead of it). display: "swap" renders text
+// immediately in a size-matched fallback, then swaps, so no layout shift.
 const fraunces = Fraunces({
   variable: "--font-heading",
   subsets: ["latin"],
   style: ["normal", "italic"],
   axes: ["SOFT", "opsz"],
+  display: "swap",
+  preload: false,
 });
 
 const inter = Inter({
   variable: "--font-body",
   subsets: ["latin"],
+  display: "swap",
+  preload: false,
 });
 
 export const viewport: Viewport = {
