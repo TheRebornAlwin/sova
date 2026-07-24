@@ -18,7 +18,6 @@ const inter = Inter({
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  maximumScale: 1,
   themeColor: "#F4F1EA",
 };
 
@@ -72,16 +71,8 @@ fbq('track', 'PageView');`,
             __html: `<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=2209407996525613&ev=PageView&noscript=1" alt=""/>`,
           }}
         />
-        {/* Microsoft Clarity — replace SOVA_CLARITY_ID with your real project ID */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(c,l,a,r,i,t,y){
-    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-})(window, document, "clarity", "script", "SOVA_CLARITY_ID");`,
-          }}
-        />
+        {/* Microsoft Clarity — add the loader here with a real project ID if you
+            decide to use Clarity. Left out for now so no dead script loads. */}
       </head>
       <body className={`${fraunces.variable} ${inter.variable} antialiased`}>
         <ClientLayout>{children}</ClientLayout>

@@ -122,13 +122,11 @@ export default function ProductReviews() {
 
         {/* Masonry columns so reviews keep their natural height, some short,
             some long, instead of every card stretching to match its row. */}
-        <div className="columns-1 md:columns-2 gap-4 [column-fill:balance]">
+        <ScrollReveal>
+          <div className="columns-1 md:columns-2 gap-4 [column-fill:balance]">
           {displayedReviews.map((review, i) => (
-            <motion.div
+            <div
               key={`${review.name}-${i}`}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: (i % REVIEWS_PER_PAGE) * 0.04 }}
               className="mb-4 break-inside-avoid"
             >
                 <div className="bg-surface-raised border border-black/[0.06] rounded-2xl p-5 transition-all duration-300 hover:border-black/10 hover:shadow-sm">
@@ -168,9 +166,10 @@ export default function ProductReviews() {
                     {review.text}
                   </p>
                 </div>
-            </motion.div>
+            </div>
           ))}
-        </div>
+          </div>
+        </ScrollReveal>
 
         {canShowMore ? (
           <div className="text-center mt-10">

@@ -101,12 +101,9 @@ export default function ProductPageClient({ product }: { product: Product }) {
   const currentDiscount = bundleDiscount(quantity);
 
   useEffect(() => {
-    // Preload gallery images.
-    product.images.forEach((src) => {
-      const img = new window.Image();
-      img.src = src;
-    });
-    // Meta Pixel ViewContent.
+    // Meta Pixel ViewContent. (Gallery images are not eagerly preloaded so they
+    // don't compete with the LCP image; the visible one has priority and the
+    // rest lazy-load as the shopper opens them.)
     if (typeof window !== "undefined" && typeof window.fbq === "function") {
       window.fbq("track", "ViewContent", {
         content_name: product.title,

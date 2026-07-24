@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 
 interface ScrollRevealProps {
@@ -11,6 +11,9 @@ interface ScrollRevealProps {
   className?: string;
 }
 
+// Lightweight reveal: a single IntersectionObserver + a CSS transition, instead
+// of framer-motion. Same fade-up-on-scroll look, a fraction of the JS/hydration
+// cost (this wrapper is used dozens of times across the site).
 export default function ScrollReveal({
   children,
   direction = "up",
@@ -18,24 +21,45 @@ export default function ScrollReveal({
   duration = 0.3,
   className,
 }: ScrollRevealProps) {
-  const offsets = {
-    up: { y: 24 },
-    down: { y: -24 },
-    left: { y: 16 },
-    right: { y: 16 },
-  };
+  const ref = useRef<HTMLDivElement>(null);
+  const [shown, setShown] = useState(false);
 
-  const offset = offsets[direction];
+  const offsetY = direction === "down" ? -24 : direction === "up" ? 24 : 16;
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    if (typeof IntersectionObserver === "undefined") {
+      setShown(true);
+      return;
+    }
+    const io = new IntersectionObserver(
+      (entries) => {
+        for (const e of entries) {
+          if (e.isIntersecting) {
+            setShown(true);
+            io.disconnect();
+            break;
+          }
+        }
+      },
+      { rootMargin: "0px 0px -80px 0px" }
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: offset.y }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-80px" }}
-      transition={{ duration, delay, ease: "easeOut" }}
+    <div
+      ref={ref}
       className={cn(className)}
+      style={{
+        opacity: shown ? 1 : 0,
+        transform: shown ? "none" : `translateY(${offsetY}px)`,
+        transition: `opacity ${duration}s ease-out ${delay}s, transform ${duration}s ease-out ${delay}s`,
+      }}
     >
       {children}
-    </motion.div>
+    </div>
   );
 }
