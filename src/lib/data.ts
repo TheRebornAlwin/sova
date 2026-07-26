@@ -23,8 +23,8 @@ export const offer = {
   guaranteeDays: 90,
   outcomeDays: 14,
   warrantyYears: 2,
-  bonusName: "The 10-Minute Reset Guide",
-  bonusBlurb: "a short wind-down ritual that gets the most out of every session",
+  bonusName: "The Trigger Points Map",
+  bonusBlurb: "the 5 pressure-point spots for instant neck relief",
   bonusValue: 29,
   shipping: "Free US shipping",
 };
@@ -101,7 +101,7 @@ export const heroProduct: Product = {
     "Run time: Up to 6 sessions per charge, silent 15-minute auto-off",
     "Fit: Contoured to sit on your neck and shoulders, completely hands-free",
     "Warranty: 2-year free replacement if it ever stops working",
-    "In the box: Nuro, USB-C cable, travel pouch, plus The 10-Minute Reset Guide (digital)",
+    "In the box: Nuro, USB-C cable, travel pouch, plus The Trigger Points Map (digital)",
   ],
   category: "Wellness & Self-Care",
 };

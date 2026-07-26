@@ -374,7 +374,7 @@ export default function ProductPageClient({ product }: { product: Product }) {
             {/* Offer reassurance */}
             <p className="mt-4 text-xs text-muted leading-relaxed text-center md:text-left">
               Free US shipping, a 90-day guarantee, and a 2-year warranty. Plus{" "}
-              <span className="text-gold">The 10-Minute Reset Guide</span> ($29 value),
+              <span className="text-gold">The Trigger Points Map</span> ($29 value),
               free with every order.
             </p>
 

@@ -44,7 +44,7 @@ export default function RefundPolicyPage() {
               <ul className="list-disc pl-5 space-y-1.5">
                 <li>Item must be returned within 90 days of delivery</li>
                 <li>No restocking fee, and no questions about why</li>
-                <li>Keep the bonus 10-Minute Reset Guide either way</li>
+                <li>Keep the bonus Trigger Points Map either way</li>
                 <li>Damaged or defective items qualify for free return shipping</li>
               </ul>
             </div>

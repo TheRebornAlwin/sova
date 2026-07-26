@@ -14,7 +14,7 @@ const offerItems = [
   },
   {
     value: "FREE",
-    label: "$29 Reset Guide",
+    label: "$29 Trigger Points Map",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
     ),
@@ -86,8 +86,8 @@ export default function SpecialOffer() {
             </div>
             <div className="aspect-square rounded-3xl overflow-hidden border border-black/[0.06] shadow-lg">
               <Image
-                src="/products/nuro-reset-guide.webp"
-                alt="The 10-Minute Reset Guide, a free digital guide with every Nuro"
+                src="/products/nuro-guide-square.webp"
+                alt="The Trigger Points Map, a free digital guide with every Nuro"
                 width={1080}
                 height={1080}
                 loading="lazy"
