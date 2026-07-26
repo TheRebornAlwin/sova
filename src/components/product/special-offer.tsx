@@ -86,10 +86,10 @@ export default function SpecialOffer() {
             </div>
             <div className="aspect-square rounded-3xl overflow-hidden border border-black/[0.06] shadow-lg">
               <Image
-                src="/products/nuro-2-v2.webp"
-                alt="Everything included with the Nuro, free with every order"
-                width={1254}
-                height={1254}
+                src="/products/nuro-reset-guide.webp"
+                alt="The 10-Minute Reset Guide, a free digital guide with every Nuro"
+                width={1080}
+                height={1080}
                 loading="lazy"
                 className="w-full h-full object-cover"
               />
