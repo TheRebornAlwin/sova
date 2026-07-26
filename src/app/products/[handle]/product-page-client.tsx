@@ -168,11 +168,6 @@ export default function ProductPageClient({ product }: { product: Product }) {
                         priority={i === 0}
                         className="w-full h-full object-cover"
                       />
-                      {i === 0 && (
-                        <span className="absolute top-4 right-4 px-3 py-1 rounded-full bg-gold text-white text-xs font-bold">
-                          -{discountPct}% OFF
-                        </span>
-                      )}
                     </div>
                   </div>
                 ))}
@@ -211,16 +206,6 @@ export default function ProductPageClient({ product }: { product: Product }) {
                     />
                   </motion.div>
                 </AnimatePresence>
-
-                {selectedImage === 0 && (
-                  <motion.span
-                    initial={{ scale: 0 }}
-                    animate={{ scale: 1 }}
-                    className="absolute top-4 right-4 px-3 py-1 rounded-full bg-gold text-white text-xs font-bold"
-                  >
-                    -{discountPct}% OFF
-                  </motion.span>
-                )}
 
                 {selectedImage > 0 && (
                   <button
