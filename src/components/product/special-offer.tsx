@@ -86,7 +86,7 @@ export default function SpecialOffer() {
             </div>
             <div className="aspect-square rounded-3xl overflow-hidden border border-black/[0.06] shadow-lg">
               <Image
-                src="/products/nuro-guide-square.webp"
+                src="/products/nuro-guide-3d.webp"
                 alt="The Trigger Points Map, a free digital guide with every Nuro"
                 width={1080}
                 height={1080}
