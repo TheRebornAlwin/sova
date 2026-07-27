@@ -73,8 +73,8 @@ export default function SpecialOffer() {
         </ScrollReveal>
 
         <ScrollReveal>
-          <div className="grid grid-cols-2 gap-4 md:gap-5 items-stretch w-full max-w-3xl mx-auto">
-            <div className="aspect-square rounded-3xl overflow-hidden border border-black/[0.06] shadow-lg">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 items-stretch w-full max-w-5xl mx-auto">
+            <div className="aspect-square rounded-2xl md:rounded-3xl overflow-hidden border border-black/[0.06] shadow-lg">
               <Image
                 src="/products/nuro-main-v2.webp"
                 alt="The Nuro heated shiatsu neck and shoulder massager"
@@ -84,10 +84,30 @@ export default function SpecialOffer() {
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="aspect-square rounded-3xl overflow-hidden border border-black/[0.06] shadow-lg">
+            <div className="aspect-square rounded-2xl md:rounded-3xl overflow-hidden border border-black/[0.06] shadow-lg">
+              <Image
+                src="/products/nuro-guide-3d.webp"
+                alt="The Trigger Points Map guide, free with every Nuro"
+                width={1080}
+                height={1080}
+                loading="lazy"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="aspect-square rounded-2xl md:rounded-3xl overflow-hidden border border-black/[0.06] shadow-lg">
               <Image
                 src="/products/nuro-trigger-map.webp"
                 alt="The Trigger Points Map, the 5 pressure-point spots for neck relief"
+                width={1200}
+                height={1200}
+                loading="lazy"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="aspect-square rounded-2xl md:rounded-3xl overflow-hidden border border-black/[0.06] shadow-lg">
+              <Image
+                src="/products/nuro-audio.webp"
+                alt="Wind-Down Audio, three calming tracks free with every Nuro"
                 width={1200}
                 height={1200}
                 loading="lazy"
