@@ -73,7 +73,7 @@ export default function SpecialOffer() {
         </ScrollReveal>
 
         <ScrollReveal>
-          <div className="grid grid-cols-2 gap-4 md:gap-5 items-stretch w-full max-w-3xl mx-auto">
+          <div className="grid grid-cols-3 gap-3 md:gap-5 items-stretch w-full max-w-4xl mx-auto">
             <div className="aspect-square rounded-3xl overflow-hidden border border-black/[0.06] shadow-lg">
               <Image
                 src="/products/nuro-main-v2.webp"
@@ -90,6 +90,16 @@ export default function SpecialOffer() {
                 alt="The Trigger Points Map, a free digital guide with every Nuro"
                 width={1080}
                 height={1080}
+                loading="lazy"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="aspect-square rounded-3xl overflow-hidden border border-black/[0.06] shadow-lg">
+              <Image
+                src="/products/nuro-trigger-map.webp"
+                alt="The Trigger Points Map, the 5 pressure-point spots for neck relief"
+                width={1200}
+                height={1200}
                 loading="lazy"
                 className="w-full h-full object-cover"
               />
