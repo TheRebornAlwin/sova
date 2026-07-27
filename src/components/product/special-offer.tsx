@@ -107,7 +107,7 @@ export default function SpecialOffer() {
             <div className="aspect-square rounded-2xl md:rounded-3xl overflow-hidden border border-black/[0.06] shadow-lg">
               <Image
                 src="/products/nuro-audio.webp"
-                alt="Wind-Down Audio, three calming tracks free with every Nuro"
+                alt="Wind-Down Audio, five calming tracks free with every Nuro"
                 width={1200}
                 height={1200}
                 loading="lazy"
