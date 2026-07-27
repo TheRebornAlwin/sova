@@ -73,23 +73,13 @@ export default function SpecialOffer() {
         </ScrollReveal>
 
         <ScrollReveal>
-          <div className="grid grid-cols-3 gap-3 md:gap-5 items-stretch w-full max-w-4xl mx-auto">
+          <div className="grid grid-cols-2 gap-4 md:gap-5 items-stretch w-full max-w-3xl mx-auto">
             <div className="aspect-square rounded-3xl overflow-hidden border border-black/[0.06] shadow-lg">
               <Image
                 src="/products/nuro-main-v2.webp"
                 alt="The Nuro heated shiatsu neck and shoulder massager"
                 width={1254}
                 height={1254}
-                loading="lazy"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="aspect-square rounded-3xl overflow-hidden border border-black/[0.06] shadow-lg">
-              <Image
-                src="/products/nuro-guide-3d.webp"
-                alt="The Trigger Points Map, a free digital guide with every Nuro"
-                width={1080}
-                height={1080}
                 loading="lazy"
                 className="w-full h-full object-cover"
               />
