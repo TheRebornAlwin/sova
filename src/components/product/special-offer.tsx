@@ -73,9 +73,9 @@ export default function SpecialOffer() {
         </ScrollReveal>
 
         <ScrollReveal>
-          <div className="grid grid-cols-4 gap-3 md:gap-4 items-stretch w-full max-w-4xl mx-auto">
-            {/* Big Nuro image on the left */}
-            <div className="col-span-3 rounded-2xl md:rounded-3xl overflow-hidden border border-black/[0.06] shadow-lg">
+          <div className="grid grid-cols-2 gap-3 md:gap-4 items-stretch w-full max-w-3xl mx-auto">
+            {/* Nuro image on the left, ending at the middle */}
+            <div className="rounded-2xl md:rounded-3xl overflow-hidden border border-black/[0.06] shadow-lg">
               <Image
                 src="/products/nuro-main-v2.webp"
                 alt="The Nuro heated shiatsu neck and shoulder massager"
