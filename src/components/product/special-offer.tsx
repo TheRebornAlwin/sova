@@ -74,15 +74,23 @@ export default function SpecialOffer() {
 
         <ScrollReveal>
           <div className="grid grid-cols-2 gap-3 md:gap-4 items-stretch w-full max-w-3xl mx-auto">
-            {/* Nuro image on the left, ending at the middle */}
-            <div className="rounded-2xl md:rounded-3xl overflow-hidden border border-black/[0.06] shadow-lg">
+            {/* Nuro image on the left, ending at the middle. The full product is
+                shown (object-contain) over a soft blurred fill so nothing is cropped. */}
+            <div className="relative rounded-2xl md:rounded-3xl overflow-hidden border border-black/[0.06] shadow-lg">
+              <Image
+                src="/products/nuro-main-v2.webp"
+                alt=""
+                aria-hidden
+                fill
+                sizes="(max-width: 768px) 50vw, 384px"
+                className="object-cover blur-2xl scale-110"
+              />
               <Image
                 src="/products/nuro-main-v2.webp"
                 alt="The Nuro heated shiatsu neck and shoulder massager"
-                width={1254}
-                height={1254}
-                loading="lazy"
-                className="w-full h-full object-cover"
+                fill
+                sizes="(max-width: 768px) 50vw, 384px"
+                className="object-contain"
               />
             </div>
             {/* Three tiles stacked on the right */}
