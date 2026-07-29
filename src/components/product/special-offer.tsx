@@ -35,6 +35,25 @@ const offerItems = [
   },
 ];
 
+function CheckIcon() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="18"
+      height="18"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="text-gold flex-shrink-0"
+    >
+      <polyline points="20 6 9 17 4 12" />
+    </svg>
+  );
+}
+
 export default function SpecialOffer() {
   return (
     <section className="py-20 md:py-28 px-6 bg-surface section-glow-gold cv-section">
@@ -73,133 +92,73 @@ export default function SpecialOffer() {
         </ScrollReveal>
 
         <ScrollReveal>
-          <div className="grid grid-cols-4 gap-3 md:gap-4 items-stretch w-full max-w-4xl mx-auto">
-            {/* Big square Nuro image, 3x the size of the stacked tiles */}
-            <div className="col-span-3 rounded-2xl md:rounded-3xl overflow-hidden border border-black/[0.06] shadow-lg">
-              <Image
-                src="/products/nuro-main-v2.webp"
-                alt="The Nuro heated shiatsu neck and shoulder massager"
-                width={1254}
-                height={1254}
-                loading="lazy"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            {/* Three small tiles stacked on the right */}
-            <div className="flex flex-col gap-3 md:gap-4">
-              <div className="aspect-square rounded-xl md:rounded-2xl overflow-hidden border border-gold/40 shadow-[0_0_30px_-2px_rgba(138,154,130,0.65)]">
+          <div className="grid grid-cols-2 gap-4 md:gap-5 w-full max-w-2xl mx-auto">
+            {[
+              ["/products/nuro-main-v2.webp", "The Nuro heated shiatsu neck and shoulder massager", "$159.99"],
+              ["/products/nuro-night.webp", "The 10-Minute Wind-Down guide", "$29"],
+              ["/products/nuro-trigger-map.webp", "The Trigger Points Map, the 5 spots that hold your tension", "$19"],
+              ["/products/nuro-audio.webp", "Handcrafted Wind-Down Audio, five calming tracks", "$15"],
+            ].map(([src, alt, value]) => (
+              <div
+                key={src}
+                className="relative aspect-square rounded-2xl overflow-hidden border border-gold/40 shadow-[0_0_30px_-4px_rgba(138,154,130,0.6)]"
+              >
                 <Image
-                  src="/products/nuro-night.webp"
-                  alt="The 10-Minute Wind-Down, ten quiet minutes to switch off"
+                  src={src}
+                  alt={alt}
                   width={1200}
                   height={1200}
                   loading="lazy"
                   className="w-full h-full object-cover"
                 />
+                <span className="absolute top-2.5 right-2.5 rounded-full bg-gold-dark text-white text-[11px] md:text-xs font-semibold px-2.5 py-1 shadow-sm">
+                  Value: {value}
+                </span>
               </div>
-              <div className="aspect-square rounded-xl md:rounded-2xl overflow-hidden border border-gold/40 shadow-[0_0_30px_-2px_rgba(138,154,130,0.65)]">
-                <Image
-                  src="/products/nuro-trigger-map.webp"
-                  alt="The Trigger Points Map, the 5 spots that hold your tension"
-                  width={1200}
-                  height={1200}
-                  loading="lazy"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="aspect-square rounded-xl md:rounded-2xl overflow-hidden border border-gold/40 shadow-[0_0_30px_-2px_rgba(138,154,130,0.65)]">
-                <Image
-                  src="/products/nuro-audio.webp"
-                  alt="Handcrafted Wind-Down Audio, five calming tracks free with every Nuro"
-                  width={1200}
-                  height={1200}
-                  loading="lazy"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </div>
+            ))}
           </div>
         </ScrollReveal>
 
-        {/* Itemized value stack */}
+        {/* What you get + price */}
         <ScrollReveal>
           <div className="mt-16 max-w-md mx-auto">
             <p className="text-center text-xs font-medium tracking-[0.22em] uppercase text-gold mb-5">
               Here&apos;s everything you get
             </p>
             <div className="rounded-3xl border border-gold/25 bg-gold/[0.04] p-6 md:p-7">
-              <ul className="space-y-3.5">
+              <ul className="space-y-3">
                 {[
-                  ["Nuro massager", "$159.99"],
-                  ["The 10-Minute Wind-Down guide", "$29"],
-                  ["The Trigger Points Map", "$19"],
-                  ["Wind-Down Audio, 5 tracks", "$15"],
-                ].map(([name, val]) => (
-                  <li key={name} className="flex items-center justify-between gap-3">
-                    <span className="flex items-center gap-2.5 text-[15px] text-foreground">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="18"
-                        height="18"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="text-gold flex-shrink-0"
-                      >
-                        <polyline points="20 6 9 17 4 12" />
-                      </svg>
-                      {name}
-                    </span>
-                    <span className="text-[15px] font-medium text-slate whitespace-nowrap">
-                      {val}
-                    </span>
+                  "Nuro massager",
+                  "The 10-Minute Wind-Down guide",
+                  "The Trigger Points Map",
+                  "Wind-Down Audio, 5 tracks",
+                ].map((name) => (
+                  <li key={name} className="flex items-center gap-2.5 text-[15px] text-foreground">
+                    <CheckIcon />
+                    {name}
                   </li>
                 ))}
               </ul>
-              <ul className="mt-4 pt-4 border-t border-gold/15 space-y-3">
+              <ul className="mt-3 pt-3 border-t border-gold/15 space-y-3">
                 {["VIP support", "2-year warranty", "90-day money-back guarantee", "Free US shipping"].map(
                   (perk) => (
-                    <li key={perk} className="flex items-center justify-between gap-3">
-                      <span className="flex items-center gap-2.5 text-[15px] text-foreground">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="18"
-                          height="18"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2.5"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          className="text-gold flex-shrink-0"
-                        >
-                          <polyline points="20 6 9 17 4 12" />
-                        </svg>
-                        {perk}
-                      </span>
-                      <span className="text-xs font-medium uppercase tracking-wide text-muted whitespace-nowrap">
-                        Included
-                      </span>
+                    <li key={perk} className="flex items-center gap-2.5 text-[15px] text-foreground">
+                      <CheckIcon />
+                      {perk}
                     </li>
                   )
                 )}
               </ul>
-              <div className="mt-5 pt-4 border-t border-gold/20 flex items-center justify-between">
-                <span className="text-sm font-semibold uppercase tracking-wide text-heading">
-                  Total value
-                </span>
-                <span className="text-xl text-lavender line-through">$222.99</span>
-              </div>
             </div>
 
-            <div className="mt-7 text-center">
+            <div className="mt-8 text-center">
               <span className="inline-block rounded-full bg-gold-dark text-white text-xs font-bold tracking-wide px-4 py-1.5">
                 YOU SAVE $143 TODAY
               </span>
-              <div className="mt-4">
+              <p className="mt-4 text-sm font-medium text-slate">
+                Value: <span className="text-lavender line-through">$222.99</span>
+              </p>
+              <div className="mt-1">
                 <span className="font-heading text-5xl md:text-6xl font-medium text-gold leading-none">
                   $79.99
                 </span>
