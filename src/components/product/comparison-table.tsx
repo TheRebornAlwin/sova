@@ -35,7 +35,7 @@ export default function ComparisonTable() {
 
         <ScrollReveal>
           <div className="rounded-2xl border border-black/[0.06] overflow-hidden shadow-sm">
-            <div className="grid grid-cols-[1.5fr_1fr_1fr_1fr] sm:grid-cols-[1fr_1fr_1fr_1fr]">
+            <div className="grid grid-cols-[minmax(0,1.5fr)_minmax(0,1fr)_minmax(0,1fr)_minmax(0,1fr)] sm:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_minmax(0,1fr)_minmax(0,1fr)]">
               <div className="p-3 sm:p-4" />
               <div className="p-3 sm:p-4 bg-gold text-white text-center text-xs sm:text-sm font-medium">
                 Nuro
@@ -51,7 +51,7 @@ export default function ComparisonTable() {
             {rows.map((row, ri) => (
               <div
                 key={row.label}
-                className={`grid grid-cols-[1.5fr_1fr_1fr_1fr] sm:grid-cols-[1fr_1fr_1fr_1fr] ${ri % 2 === 0 ? "bg-black/[0.02]" : "bg-transparent"}`}
+                className={`grid grid-cols-[minmax(0,1.5fr)_minmax(0,1fr)_minmax(0,1fr)_minmax(0,1fr)] sm:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_minmax(0,1fr)_minmax(0,1fr)] ${ri % 2 === 0 ? "bg-black/[0.02]" : "bg-transparent"}`}
               >
                 <div className="p-2.5 sm:p-4 text-[11px] sm:text-sm font-medium text-foreground flex items-center">
                   {row.label}

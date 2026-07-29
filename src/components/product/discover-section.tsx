@@ -37,12 +37,15 @@ export default function DiscoverSection() {
               massager from <BrandName className="text-heading" />, for anyone sick of
               carrying the day around in their shoulders with a knot that will not let go.
             </p>
-            <div className="flex flex-col items-center md:items-start space-y-3">
+            <div className="flex flex-col items-stretch md:items-start gap-2.5 md:gap-3">
               {discoveryBullets.map((point, i) => (
-                <p key={i} className="inline-flex gap-2 text-sm text-foreground max-w-[90%] md:max-w-none text-left">
+                <div
+                  key={i}
+                  className="flex items-start gap-2.5 text-sm text-foreground text-left rounded-2xl md:rounded-none bg-gold/[0.05] md:bg-transparent border border-gold/15 md:border-0 p-3.5 md:p-0"
+                >
                   <span className="text-gold flex-shrink-0">&#8226;</span>
                   <span>{point}</span>
-                </p>
+                </div>
               ))}
             </div>
           </ScrollReveal>

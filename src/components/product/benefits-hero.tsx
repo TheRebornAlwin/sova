@@ -26,10 +26,18 @@ export default function BenefitsHero() {
               Ten minutes of real kneading gives your body the release it&apos;s been
               asking for, so you can:
             </p>
-            <div className="flex flex-col items-center md:items-start space-y-3">
+            {/* On mobile each point sits in its own soft card so it reads as
+                distinct, digestible chunks instead of text-after-text. Desktop
+                keeps the clean inline bullets. */}
+            <div className="flex flex-col items-stretch md:items-start gap-2.5 md:gap-3">
               {benefits.map((benefit, i) => (
-                <div key={i} className="inline-flex items-center gap-3 max-w-[90%] md:max-w-none">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-gold flex-shrink-0"><polyline points="20 6 9 17 4 12"/></svg>
+                <div
+                  key={i}
+                  className="flex items-center gap-3 text-left rounded-2xl md:rounded-none bg-gold/[0.05] md:bg-transparent border border-gold/15 md:border-0 p-3.5 md:p-0"
+                >
+                  <span className="flex-shrink-0 flex items-center justify-center w-8 h-8 md:w-auto md:h-auto rounded-full bg-gold/12 md:bg-transparent text-gold">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  </span>
                   <span className="text-[15px] font-medium text-heading">{benefit}</span>
                 </div>
               ))}

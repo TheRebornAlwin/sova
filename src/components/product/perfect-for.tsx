@@ -42,21 +42,29 @@ export default function PerfectFor() {
             <p className="text-slate leading-relaxed mb-5">
               If any of this sounds like you:
             </p>
-            <div className="flex flex-col items-center md:items-start space-y-3 mb-8">
+            <div className="flex flex-col items-stretch md:items-start gap-2.5 md:gap-3 mb-8">
               {bulletPoints.map((point, i) => (
-                <p key={i} className="inline-flex gap-2 text-sm text-foreground max-w-[90%] md:max-w-none text-left">
+                <div
+                  key={i}
+                  className="flex items-start gap-2.5 text-sm text-foreground text-left rounded-2xl md:rounded-none bg-gold/[0.05] md:bg-transparent border border-gold/15 md:border-0 p-3.5 md:p-0"
+                >
                   <span className="text-gold flex-shrink-0">&#8226;</span>
                   <span>{point}</span>
-                </p>
+                </div>
               ))}
             </div>
             <p className="text-slate leading-relaxed mb-5">
               Then <BrandName className="text-heading" /> made the Nuro for you.
             </p>
-            <div className="flex flex-col items-center md:items-start space-y-3">
+            <div className="flex flex-col items-stretch md:items-start gap-2.5 md:gap-3">
               {benefitBullets.map((point, i) => (
-                <div key={i} className="inline-flex items-start gap-3 max-w-[90%] md:max-w-none">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-gold flex-shrink-0 mt-0.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <div
+                  key={i}
+                  className="flex items-center gap-3 text-left rounded-2xl md:rounded-none bg-gold/[0.05] md:bg-transparent border border-gold/15 md:border-0 p-3.5 md:p-0"
+                >
+                  <span className="flex-shrink-0 flex items-center justify-center w-8 h-8 md:w-auto md:h-auto rounded-full bg-gold/12 md:bg-transparent text-gold">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  </span>
                   <span className="text-sm text-foreground">{point}</span>
                 </div>
               ))}
