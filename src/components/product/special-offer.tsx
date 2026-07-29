@@ -14,7 +14,7 @@ const offerItems = [
   },
   {
     value: "FREE",
-    label: "$29 Trigger Points Map",
+    label: "$63 in bonus gifts",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
     ),
@@ -87,7 +87,7 @@ export default function SpecialOffer() {
             </div>
             {/* Three small tiles stacked on the right */}
             <div className="flex flex-col gap-3 md:gap-4">
-              <div className="aspect-square rounded-xl md:rounded-2xl overflow-hidden border border-black/[0.06] shadow-sm">
+              <div className="aspect-square rounded-xl md:rounded-2xl overflow-hidden border border-gold/40 shadow-[0_0_30px_-2px_rgba(138,154,130,0.65)]">
                 <Image
                   src="/products/nuro-night.webp"
                   alt="The 10-Minute Wind-Down, ten quiet minutes to switch off"
@@ -97,7 +97,7 @@ export default function SpecialOffer() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="aspect-square rounded-xl md:rounded-2xl overflow-hidden border border-black/[0.06] shadow-sm">
+              <div className="aspect-square rounded-xl md:rounded-2xl overflow-hidden border border-gold/40 shadow-[0_0_30px_-2px_rgba(138,154,130,0.65)]">
                 <Image
                   src="/products/nuro-trigger-map.webp"
                   alt="The Trigger Points Map, the 5 spots that hold your tension"
@@ -107,7 +107,7 @@ export default function SpecialOffer() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="aspect-square rounded-xl md:rounded-2xl overflow-hidden border border-black/[0.06] shadow-sm">
+              <div className="aspect-square rounded-xl md:rounded-2xl overflow-hidden border border-gold/40 shadow-[0_0_30px_-2px_rgba(138,154,130,0.65)]">
                 <Image
                   src="/products/nuro-audio.webp"
                   alt="Handcrafted Wind-Down Audio, five calming tracks free with every Nuro"
@@ -121,20 +121,93 @@ export default function SpecialOffer() {
           </div>
         </ScrollReveal>
 
-        {/* Price reveal */}
+        {/* Itemized value stack */}
         <ScrollReveal>
-          <div className="mt-14 text-center">
-            <div className="flex items-end justify-center gap-4">
-              <span className="text-2xl text-lavender line-through leading-none mb-1">
-                $259
-              </span>
-              <span className="font-heading text-5xl md:text-6xl font-medium text-gold leading-none">
-                $79.99
-              </span>
-            </div>
-            <p className="mt-4 text-[15px] text-foreground/80">
-              Everything above, one Nuro, and <BrandName /> ships it free.
+          <div className="mt-16 max-w-md mx-auto">
+            <p className="text-center text-xs font-medium tracking-[0.22em] uppercase text-gold mb-5">
+              Here&apos;s everything you get
             </p>
+            <div className="rounded-3xl border border-gold/25 bg-gold/[0.04] p-6 md:p-7">
+              <ul className="space-y-3.5">
+                {[
+                  ["Nuro massager", "$159.99"],
+                  ["The 10-Minute Wind-Down guide", "$29"],
+                  ["The Trigger Points Map", "$19"],
+                  ["Wind-Down Audio, 5 tracks", "$15"],
+                ].map(([name, val]) => (
+                  <li key={name} className="flex items-center justify-between gap-3">
+                    <span className="flex items-center gap-2.5 text-[15px] text-foreground">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="text-gold flex-shrink-0"
+                      >
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg>
+                      {name}
+                    </span>
+                    <span className="text-[15px] font-medium text-slate whitespace-nowrap">
+                      {val}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+              <ul className="mt-4 pt-4 border-t border-gold/15 space-y-3">
+                {["VIP support", "2-year warranty", "90-day money-back guarantee", "Free US shipping"].map(
+                  (perk) => (
+                    <li key={perk} className="flex items-center justify-between gap-3">
+                      <span className="flex items-center gap-2.5 text-[15px] text-foreground">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="text-gold flex-shrink-0"
+                        >
+                          <polyline points="20 6 9 17 4 12" />
+                        </svg>
+                        {perk}
+                      </span>
+                      <span className="text-xs font-medium uppercase tracking-wide text-muted whitespace-nowrap">
+                        Included
+                      </span>
+                    </li>
+                  )
+                )}
+              </ul>
+              <div className="mt-5 pt-4 border-t border-gold/20 flex items-center justify-between">
+                <span className="text-sm font-semibold uppercase tracking-wide text-heading">
+                  Total value
+                </span>
+                <span className="text-xl text-lavender line-through">$222.99</span>
+              </div>
+            </div>
+
+            <div className="mt-7 text-center">
+              <span className="inline-block rounded-full bg-gold-dark text-white text-xs font-bold tracking-wide px-4 py-1.5">
+                YOU SAVE $143 TODAY
+              </span>
+              <div className="mt-4">
+                <span className="font-heading text-5xl md:text-6xl font-medium text-gold leading-none">
+                  $79.99
+                </span>
+              </div>
+              <p className="mt-3 text-[15px] text-foreground/80">
+                One Nuro, all three bonuses, and <BrandName /> ships it free.
+              </p>
+            </div>
           </div>
         </ScrollReveal>
       </div>
