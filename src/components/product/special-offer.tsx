@@ -128,23 +128,33 @@ export default function SpecialOffer() {
             <div className="rounded-3xl border border-gold/25 bg-gold/[0.04] p-6 md:p-7">
               <ul className="space-y-3">
                 {[
-                  "Nuro massager",
-                  "The 10-Minute Wind-Down guide",
-                  "The Trigger Points Map",
-                  "Wind-Down Audio, 5 tracks",
-                ].map((name) => (
-                  <li key={name} className="flex items-center gap-2.5 text-[15px] text-foreground">
-                    <CheckIcon />
-                    {name}
+                  ["Nuro massager", "$159.99"],
+                  ["The 10-Minute Wind-Down guide", "$29"],
+                  ["The Trigger Points Map", "$19"],
+                  ["Wind-Down Audio, 5 tracks", "$15"],
+                ].map(([name, val]) => (
+                  <li key={name} className="flex items-center justify-between gap-3">
+                    <span className="flex items-center gap-2.5 text-[15px] text-foreground">
+                      <CheckIcon />
+                      {name}
+                    </span>
+                    <span className="text-[15px] font-medium text-slate whitespace-nowrap">
+                      Value: {val}
+                    </span>
                   </li>
                 ))}
               </ul>
               <ul className="mt-3 pt-3 border-t border-gold/15 space-y-3">
                 {["VIP support", "2-year warranty", "90-day money-back guarantee", "Free US shipping"].map(
                   (perk) => (
-                    <li key={perk} className="flex items-center gap-2.5 text-[15px] text-foreground">
-                      <CheckIcon />
-                      {perk}
+                    <li key={perk} className="flex items-center justify-between gap-3">
+                      <span className="flex items-center gap-2.5 text-[15px] text-foreground">
+                        <CheckIcon />
+                        {perk}
+                      </span>
+                      <span className="text-xs font-medium uppercase tracking-wide text-muted whitespace-nowrap">
+                        Included
+                      </span>
                     </li>
                   )
                 )}
