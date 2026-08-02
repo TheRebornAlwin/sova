@@ -11,26 +11,22 @@ const REVIEWS_PER_PAGE = 16;
 
 // Featured photo reviews shown at the top of the section.
 const featuredReviews = [
-  {
-    name: "Oliver J.",
-    img: "/products/featured-review-1.webp",
-    text: "I was hesitant at first because of the price, but it's worth every penny. Really helps relieve tension after long shifts at work.",
-  },
-  {
-    name: "Grace T.",
-    img: "/products/featured-review-2.webp",
-    text: "It arrived a bit later than expected, but the packaging was perfect, and the massager is amazing. I use it after my evening workouts, and it's so relaxing.",
-  },
-  {
-    name: "Mia F.",
-    img: "/products/featured-review-3.webp",
-    text: "The build quality is excellent, and it's surprisingly quiet. I even use it while watching TV, perfect way to relax after work.",
-  },
-  {
-    name: "Ethan B.",
-    img: "/products/featured-review-4.webp",
-    text: "Bought this for myself, and I can't recommend it enough. The two thumbs and LED therapy make it feel like a professional massage right at home.",
-  },
+  { name: "Oliver J.", rating: 5, img: "/products/featured-review-1.webp", text: "I was hesitant at first because of the price, but it's worth every penny. Really helps relieve tension after long shifts at work." },
+  { name: "Grace T.", rating: 5, img: "/products/featured-review-2.webp", text: "It arrived a bit later than expected, but the packaging was perfect, and the massager is amazing. I use it after my evening workouts, and it's so relaxing." },
+  { name: "Mia F.", rating: 5, img: "/products/featured-review-3.webp", text: "The build quality is excellent, and it's surprisingly quiet. I even use it while watching TV, perfect way to relax after work." },
+  { name: "Ethan B.", rating: 5, img: "/products/featured-review-4.webp", text: "Bought this for myself, and I can't recommend it enough. The two thumbs and LED therapy make it feel like a professional massage right at home." },
+  { name: "Olivia R.", rating: 5, img: "/products/featured-review-5.webp", text: "I work from home and spend hours at the desk. This massager is my go-to for unwinding in the evenings. The design is sleek and it feels very high quality." },
+  { name: "Sophie K.", rating: 4, img: "/products/featured-review-6.webp", text: "I bought this as a gift for my husband, and he loves it. It's sturdy, comfortable, and really helps him relax after long hours in the office." },
+  { name: "Max H.", rating: 5, img: "/products/featured-review-7.webp", text: "I visit my physiotherapist every two weeks, but having this at home is perfect for daily relief. It complements my sessions and keeps my shoulders relaxed." },
+  { name: "Liam M.", rating: 5, img: "/products/featured-review-8.webp", text: "The delivery took a couple of extra days, but it was totally worth the wait. The massager works perfectly, and I use it every evening after work." },
+  { name: "Paul M.", rating: 5, img: "/products/featured-review-9.webp", text: "The design with two hands and two thumbs is unique. Feels like a real person is giving me a massage." },
+  { name: "Matthew E.", rating: 5, img: "/products/featured-review-10.webp", text: "After a full day on my feet, using it on my calves is total relief." },
+  { name: "Emma L.", rating: 5, img: "/products/featured-review-11.webp", text: "I've been using this neck and back massager after long workdays, and it's been a lifesaver. The quality feels premium, and it's so relaxing. Definitely worth it!" },
+  { name: "William K.", rating: 5, img: "/products/featured-review-12.webp", text: "I tried it with my grandma who always complains about her shoulders. She loved it, said she'd never tried anything like it." },
+  { name: "Daniel S.", rating: 5, img: "/products/featured-review-13.webp", text: "I'm not usually a gadget guy, but this one won me over. It's super relaxing after the gym." },
+  { name: "Lucas M.", rating: 5, img: "/products/featured-review-14.webp", text: "It's super easy to use, even my mom handles it with no problem. The intensity is just right." },
+  { name: "Anna S.", rating: 5, img: "/products/featured-review-15.webp", text: "Me lo regaló mi esposo porque sufro de cuello cargado. Desde que lo uso, duermo mejor y me levanto sin dolor." },
+  { name: "Chris W.", rating: 5, img: "/products/featured-review-16.webp", text: "My order arrived quickly and well packaged. I use it on the couch while watching TV, so comfy!" },
 ];
 
 function ReviewAvatar({ name }: { name: string }) {
@@ -120,7 +116,7 @@ export default function ProductReviews() {
                       Verified
                     </span>
                   </div>
-                  <StarRating rating={5} />
+                  <StarRating rating={r.rating} />
                   <p className="mt-2 text-[13px] text-slate leading-relaxed">{r.text}</p>
                 </div>
               </div>
