@@ -1,12 +1,37 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { reviewsData, reviewDisplay } from "@/lib/data";
 import ScrollReveal from "@/components/ui/scroll-reveal";
 import TextGradient from "@/components/ui/text-gradient";
 
 const REVIEWS_PER_PAGE = 16;
+
+// Featured photo reviews shown at the top of the section.
+const featuredReviews = [
+  {
+    name: "Oliver J.",
+    img: "/products/featured-review-1.webp",
+    text: "I was hesitant at first because of the price, but it's worth every penny. Really helps relieve tension after long shifts at work.",
+  },
+  {
+    name: "Grace T.",
+    img: "/products/featured-review-2.webp",
+    text: "It arrived a bit later than expected, but the packaging was perfect, and the massager is amazing. I use it after my evening workouts, and it's so relaxing.",
+  },
+  {
+    name: "Mia F.",
+    img: "/products/featured-review-3.webp",
+    text: "The build quality is excellent, and it's surprisingly quiet. I even use it while watching TV, perfect way to relax after work.",
+  },
+  {
+    name: "Ethan B.",
+    img: "/products/featured-review-4.webp",
+    text: "Bought this for myself, and I can't recommend it enough. The two thumbs and LED therapy make it feel like a professional massage right at home.",
+  },
+];
 
 function ReviewAvatar({ name }: { name: string }) {
   const initial = name.charAt(0).toUpperCase();
@@ -64,6 +89,42 @@ export default function ProductReviews() {
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-heading tracking-tight mb-2">
               Customer <TextGradient variant="gold">Reviews</TextGradient>
             </h2>
+          </div>
+        </ScrollReveal>
+
+        {/* Featured photo reviews */}
+        <ScrollReveal>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5 mb-14">
+            {featuredReviews.map((r) => (
+              <div
+                key={r.name}
+                className="rounded-2xl overflow-hidden border border-black/[0.06] bg-surface-raised shadow-sm flex flex-col"
+              >
+                <div className="aspect-[3/4] overflow-hidden bg-black/[0.03]">
+                  <Image
+                    src={r.img}
+                    alt={`${r.name}'s photo review of the Nuro`}
+                    width={259}
+                    height={334}
+                    loading="lazy"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="p-4">
+                  <div className="flex items-center gap-1.5 mb-1.5">
+                    <span className="text-sm font-semibold text-heading">{r.name}</span>
+                    <span className="inline-flex items-center gap-1 text-[11px] text-muted">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" className="text-gold">
+                        <path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm-1.1 14.6-4-4L8.3 11l2.6 2.6 5.6-5.6 1.4 1.4z" />
+                      </svg>
+                      Verified
+                    </span>
+                  </div>
+                  <StarRating rating={5} />
+                  <p className="mt-2 text-[13px] text-slate leading-relaxed">{r.text}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </ScrollReveal>
 
