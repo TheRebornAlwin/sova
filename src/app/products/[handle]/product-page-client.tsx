@@ -7,7 +7,6 @@ import type { Product } from "@/lib/data";
 import { bundleDiscount, reviewDisplay } from "@/lib/data";
 import { useCart } from "@/contexts/cart-context";
 import BrandName from "@/components/ui/brand-name";
-import OfferCountdown from "@/components/product/offer-countdown";
 import VolumeDiscounts from "@/components/product/volume-discounts";
 import ProductTabs from "@/components/product/product-tabs";
 
@@ -255,6 +254,9 @@ export default function ProductPageClient({ product }: { product: Product }) {
               <BrandName /> {product.title}
             </h1>
             <p className="mt-2 text-slate italic">{product.tagline}</p>
+            <p className="mt-2 text-[15px] text-foreground/80 leading-relaxed">
+              Ten quiet minutes, and the whole day finally leaves your shoulders.
+            </p>
 
             <div className="mt-3 flex items-center justify-center md:justify-start gap-2">
               <span className="text-gold tracking-[0.15em] text-sm">★★★★★</span>
@@ -276,7 +278,9 @@ export default function ProductPageClient({ product }: { product: Product }) {
             </div>
 
             <div className="mt-3">
-              <OfferCountdown />
+              <p className="text-sm font-medium text-gold">
+                This is the lowest price we offer the Nuro.
+              </p>
             </div>
 
             {/* Benefit badges */}

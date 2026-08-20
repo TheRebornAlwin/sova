@@ -5,7 +5,7 @@ import ScrollReveal from "@/components/ui/scroll-reveal";
 const features = [
   {
     title: "8 kneading nodes",
-    body: "Eight rotating nodes work in circles like a set of thumbs, digging into the muscle instead of buzzing on top of it. That's what actually gets the knot to give.",
+    body: "It finally reaches the knot you can never dig out yourself. Eight rotating nodes work in circles like a set of thumbs, pressing into the muscle instead of buzzing on top of it. That's what actually gets the knot to give.",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
         <circle cx="9" cy="9" r="2.4" />
@@ -17,7 +17,7 @@ const features = [
   },
   {
     title: "Real, soothing heat",
-    body: "Gentle warmth loosens the muscle while it kneads, so the knot lets go instead of fighting back. Most people don't expect the heat to matter this much, until they feel it.",
+    body: "The warmth is what makes the tension actually let go. Gentle heat loosens the muscle while it kneads, so the knot releases instead of fighting back. Most people don't expect the heat to matter this much, until they feel it.",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
         <path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z" />
@@ -26,7 +26,7 @@ const features = [
   },
   {
     title: "Adjustable intensity",
-    body: "Three speeds, forward and reverse, so you can go as light or as deep as your shoulders need that day. You stay in control the whole time.",
+    body: "You stay in control the whole time. Three speeds, forward and reverse, so you can go as light or as deep as your shoulders need that day.",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
         <line x1="4" y1="21" x2="4" y2="14" />
@@ -43,7 +43,7 @@ const features = [
   },
   {
     title: "Cordless and hands-free",
-    body: "Drapes over your neck and shoulders and stays put on its own. No cord, up to six sessions a charge, ready whenever you sit down.",
+    body: "Ready the moment you sit down. It drapes over your neck and shoulders and stays put on its own, no cord, up to six sessions a charge.",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
         <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />

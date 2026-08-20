@@ -12,6 +12,9 @@ export default function EMSComparison() {
             <h2 className="text-3xl md:text-4xl font-heading font-medium text-heading tracking-tight">
               Cheap vibration vs the Nuro
             </h2>
+            <p className="mt-6 text-[15px] md:text-base text-slate leading-relaxed max-w-2xl mx-auto text-left md:text-center">
+              How to tell if a massager will actually work, before you waste money on it: watch what it does to the muscle. If it vibrates, it only shakes the surface, and the muscle tenses right back up the second you stop. Real release needs rotating nodes that press into the muscle like a thumb, plus real heat to let it loosen. Notice how the cheap ones never actually show the nodes kneading, and never mention the heat? There&apos;s a reason. It costs more to build a massager that truly kneads and heats than one that just buzzes. The Nuro is built the expensive way, because it&apos;s the only way that works.
+            </p>
           </div>
         </ScrollReveal>
 

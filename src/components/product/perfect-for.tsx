@@ -56,6 +56,11 @@ export default function PerfectFor() {
             <p className="text-slate leading-relaxed mb-5">
               Then <BrandName className="text-heading" /> made the Nuro for you.
             </p>
+            <p className="text-slate leading-relaxed mb-5">
+              Or for someone whose shoulders carry their whole week, a partner, a
+              parent, anyone who never stops. The Nuro is the kind of gift they&apos;d
+              never buy themselves.
+            </p>
             <div className="flex flex-col items-stretch md:items-start gap-2.5 md:gap-3">
               {benefitBullets.map((point, i) => (
                 <div
