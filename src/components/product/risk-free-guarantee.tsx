@@ -1,6 +1,7 @@
 "use client";
 
 import ScrollReveal from "@/components/ui/scroll-reveal";
+import InlineCTA from "@/components/product/inline-cta";
 
 const guaranteeBullets = [
   "Feel the difference in 90 days, or we make it right",
@@ -54,6 +55,7 @@ export default function RiskFreeGuarantee() {
                 shopsovarelief@gmail.com
               </a>
             </p>
+            <InlineCTA label="Try it risk-free" />
           </div>
         </ScrollReveal>
       </div>

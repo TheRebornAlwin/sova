@@ -1,6 +1,7 @@
 "use client";
 
 import ScrollReveal from "@/components/ui/scroll-reveal";
+import InlineCTA from "@/components/product/inline-cta";
 
 export default function CostCallout() {
   return (
@@ -21,6 +22,7 @@ export default function CostCallout() {
           </div>
         </div>
       </ScrollReveal>
+      <InlineCTA label="Yes, I want lifetime relief" />
     </section>
   );
 }

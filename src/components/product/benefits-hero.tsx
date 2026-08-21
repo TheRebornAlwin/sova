@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import ScrollReveal from "@/components/ui/scroll-reveal";
+import InlineCTA from "@/components/product/inline-cta";
 
 const benefits = [
   "Work the knot loose at the base of your neck, the one you can never reach",
@@ -59,6 +60,9 @@ export default function BenefitsHero() {
             </div>
           </ScrollReveal>
         </div>
+      </div>
+      <div className="max-w-6xl mx-auto">
+        <InlineCTA label="Start unwinding tonight" />
       </div>
     </section>
   );

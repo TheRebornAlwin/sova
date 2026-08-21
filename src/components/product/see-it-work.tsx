@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import ScrollReveal from "@/components/ui/scroll-reveal";
+import InlineCTA from "@/components/product/inline-cta";
 
 // The Nuro's benefit is visible, the nodes physically knead the muscle, so this
 // slot shows a real demo shot rather than an illustrated diagram. Drop a real
@@ -61,6 +62,7 @@ export default function SeeItWork() {
             </div>
           </ScrollReveal>
         </div>
+        <InlineCTA label="Put it to work" />
       </div>
     </section>
   );

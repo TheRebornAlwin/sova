@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import ScrollReveal from "@/components/ui/scroll-reveal";
+import InlineCTA from "@/components/product/inline-cta";
 import BrandName from "@/components/ui/brand-name";
 
 const bulletPoints = [
@@ -76,6 +77,7 @@ export default function PerfectFor() {
             </div>
           </ScrollReveal>
         </div>
+        <InlineCTA label="Yes, this is me" />
       </div>
     </section>
   );
