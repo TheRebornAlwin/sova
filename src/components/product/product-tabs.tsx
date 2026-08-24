@@ -82,7 +82,7 @@ export default function ProductTabs({ product }: { product: Product }) {
             <p>
               Need help? Email us at{" "}
               <a
-                href="mailto:shopsovarelief@gmail.com"
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=shopsovarelief@gmail.com" target="_blank" rel="noopener noreferrer"
                 className="text-gold hover:underline font-medium"
               >
                 shopsovarelief@gmail.com
@@ -114,7 +114,7 @@ export default function ProductTabs({ product }: { product: Product }) {
             <p>
               Contact our friendly support team at{" "}
               <a
-                href="mailto:shopsovarelief@gmail.com"
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=shopsovarelief@gmail.com" target="_blank" rel="noopener noreferrer"
                 className="text-gold hover:underline font-medium"
               >
                 shopsovarelief@gmail.com

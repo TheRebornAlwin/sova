@@ -60,7 +60,7 @@ export default function TermsOfServicePage() {
               <h2 className="font-heading text-lg font-bold text-heading mb-2">Contact</h2>
               <p>
                 For questions about these terms, email us at{" "}
-                <a href="mailto:shopsovarelief@gmail.com" className="text-gold hover:underline">
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=shopsovarelief@gmail.com" target="_blank" rel="noopener noreferrer" className="text-gold hover:underline">
                   shopsovarelief@gmail.com
                 </a>
                 .

@@ -62,7 +62,18 @@ export default function ContactPage() {
               <GlassmorphismCard className="h-full text-center">
                 <div className="text-2xl mb-3">{c.icon}</div>
                 <h3 className="text-sm font-semibold text-heading mb-1">{c.label}</h3>
-                <p className="text-sm text-slate break-words">{c.value}</p>
+                {c.label === "Email" ? (
+                  <a
+                    href="https://mail.google.com/mail/?view=cm&fs=1&to=shopsovarelief@gmail.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-gold hover:underline break-words"
+                  >
+                    {c.value}
+                  </a>
+                ) : (
+                  <p className="text-sm text-slate break-words">{c.value}</p>
+                )}
               </GlassmorphismCard>
             </ScrollReveal>
           ))}

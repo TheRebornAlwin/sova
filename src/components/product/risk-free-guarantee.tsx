@@ -51,7 +51,7 @@ export default function RiskFreeGuarantee() {
 
             <p className="text-sm text-slate">
               Questions? Email us anytime at{" "}
-              <a href="mailto:shopsovarelief@gmail.com" className="text-gold hover:underline font-medium">
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=shopsovarelief@gmail.com" target="_blank" rel="noopener noreferrer" className="text-gold hover:underline font-medium">
                 shopsovarelief@gmail.com
               </a>
             </p>
