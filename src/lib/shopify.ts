@@ -11,7 +11,7 @@ const SHOPIFY_DOMAIN = "shop.sovarelief.com";
 
 // Shopify variant IDs (from the product's variants[].id).
 const VARIANT_IDS: Record<string, string> = {
-  nuro: "59636104626462",
+  nuro: "59861371257118",
 };
 
 interface CartItem {
@@ -23,7 +23,7 @@ interface CartItem {
 }
 
 // Builds a Shopify cart permalink, e.g.
-//   https://shop.sovarelief.com/cart/59636104626462:2?discount=SAVE10
+//   https://shop.sovarelief.com/cart/59861371257118:2?discount=SAVE10
 // which drops the shopper straight into Shopify's cart/checkout with the right
 // items and the matching bundle discount.
 export function createCheckout(items: CartItem[]): string {
