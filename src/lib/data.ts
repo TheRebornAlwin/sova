@@ -54,8 +54,8 @@ export const heroProduct: Product = {
   // (-v2) to bust browser/CDN cache when the image is replaced.
   images: [
     "/products/nuro-main-v2.webp",
-    "/products/nuro-new-1.webp",
     "/products/nuro-new-3.webp",
+    "/products/nuro-new-1.webp",
     "/products/nuro-new-2.webp",
     "/products/nuro-3-v2.webp",
     "/products/nuro-4-v2.webp",
