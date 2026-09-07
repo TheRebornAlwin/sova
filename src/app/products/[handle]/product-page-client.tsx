@@ -256,7 +256,7 @@ export default function ProductPageClient({ product }: { product: Product }) {
             </h1>
             <p className="mt-2 text-slate italic">{product.tagline}</p>
             <p className="mt-2 text-[15px] text-foreground/80 leading-relaxed">
-              Ten quiet minutes, and the whole day finally leaves your shoulders.
+              Ten quiet minutes, and the whole day finally leaves your neck.
             </p>
 
             <div className="mt-3 flex items-center justify-center md:justify-start gap-2">
