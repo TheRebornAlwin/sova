@@ -415,86 +415,86 @@ export default function ProductPageClient({ product }: { product: Product }) {
       <BenefitsHero />
       <SectionTestimonial
         name="Rachel M."
-        quote="ok I'll be honest I figured it'd be junk. another buzzy thing that does nothing. but no. it actually gets into that spot at the base of my neck, like right where it always seizes up. my coworker wouldn't shut up about hers so I caved. not gonna say it fixed my life. it just... does the thing? weird to say but yeah."
+        quote="ok so I honestly figured it was gonna be one of those buzzy things that does absolutely nothing, my coworker wouldn't shut up about hers so I finally caved and ordered one, and it actually gets right into that spot at the base of my neck that's been bugging me forever, like it presses in instead of just vibrating on top which is what I was expecting, and I'm not saying it changed my life or whatever but it genuinely does what it says which after everything else I've tried is kind of a shock."
       />
 
       <ReliefIntro />
       <SectionTestimonial
         name="Danielle P."
-        quote="my shoulders live up by my ears and I don't even notice til they ache. ten minutes with this and they just drop. I use it on the couch while my dog sits on my feet judging me. didn't realize how clenched I was, honestly. not trying to oversell it but that letting-go feeling, yeah. that's real."
+        quote="my shoulders basically live up around my ears and I don't even notice until they're aching by the end of the day, and I'll use this on the couch for like ten minutes while my dog sits on my feet staring at me and they just kind of come back down, I didn't realize how much I was holding up there until it let go honestly, I'm not usually the type to write one of these but yeah that release feeling is real."
       />
 
       <DiscoverSection />
       <SectionTestimonial
         name="Priya S."
-        quote="so every night around 8 my neck gets this tight band across it from work. every night. I throw this on while I'm half watching something and by the time it clicks off the tightness is just gone. I've tried so much stuff that did nothing. this is the first thing that actually stuck. idk. surprised me."
+        quote="every night around 8 I get this tight band across my neck from staring at a screen all day and I've tried honestly so many things that did nothing, but I just throw this on while I'm half watching tv and by the time it clicks off the tightness is basically gone, and it's the first thing that's actually stuck for me so I've kind of stopped questioning it, I just use it now."
       />
 
       <PerfectFor />
       <SectionTestimonial
         name="Marcus T."
-        quote="I'm at a laptop like nine hours a day, sometimes more, and my neck is the first thing to go by 3pm. so when they say who it's for. yeah. that's me. wish I'd grabbed it two years ago instead of complaining to everyone at the office about it."
+        quote="I'm on a laptop like nine hours a day and my neck is always the first thing to go, usually by mid afternoon it's tight and cranky and I'm rolling it around trying to crack it, so when the page is basically describing me I kind of laughed, and I only wish I'd bought it two years ago instead of complaining to everyone at work about my neck every single day."
       />
 
       <SeeItWork />
       <SectionTestimonial
         name="Emily R."
-        quote="the part that got me is you can actually see the little nodes rolling. it's not buzzing on top of your skin, it presses in and circles like actual thumbs. my mom watched me use it and immediately wanted one. that's kind of the whole thing right there. works the knot, not just the surface."
+        quote="the thing that actually sold me is you can watch the little nodes rolling around, it's not just buzzing on the surface, it presses in and does these slow circles that feel exactly like someone's thumbs digging into you, and my mom saw me using it and immediately wanted her own so that probably tells you something, it works the actual knot and not just the skin sitting on top of it."
       />
 
       <FeaturesLove />
       <SectionTestimonial
         name="Sofia L."
-        quote="honestly the heat is the bit I didn't know I was missing. turn it up and everything kind of loosens and the knot gives. and no cord, which sounds minor but I take it couch to bed without thinking about it. I forget to charge it half the time and it still lasts. no complaints really."
+        quote="honestly the heat is the part I didn't even know I was missing, you turn it up and everything just kind of loosens and the knot finally gives, and the fact that there's no cord sounds like a small thing but I take it from the couch to my bed without even thinking about it, and I forget to charge it half the time and it still holds up fine, so no real complaints from me."
       />
 
       <HowItWorks />
       <SectionTestimonial
         name="Hannah K."
-        quote="there's basically nothing to figure out. charge it, drape it on, hit a button. that's it. my mom, who calls me to change the input on her tv, set it up herself in like ten seconds. so. if she can do it, anyone can. that's my point."
+        quote="there's genuinely nothing to figure out, you charge it, drape it over your shoulders and press a button and that's the whole thing, and my mom who literally calls me to change the input on her tv managed to set it up herself in about ten seconds, so if she can do it I promise you anyone can."
       />
 
       <EMSComparison />
       <SectionTestimonial
         name="Jordan B."
         rating={4}
-        quote="look I'd already bought two of the cheap ones off some instagram ad. both just tickled and died in a month. this one actually presses in, like there's real pressure behind it. kind of mad I didn't just spend the extra the first time. would've saved myself forty bucks and a lot of disappointment."
+        quote="look I'd already wasted money on two of those cheap ones off an instagram ad and they both just kind of tickled and then died within a month, this one actually presses in like there's real pressure behind it, and honestly I'm a little annoyed I didn't just spend the extra the first time around because it would've saved me forty bucks and a whole lot of disappointment."
       />
 
       <ComparisonTable />
       <SectionTestimonial
         name="Alicia N."
-        quote="a massage by me is ninety bucks and I'd go maybe twice a year if I'm lucky. this thing paid for itself in like a month and it just sits there whenever my neck acts up. no booking, no tipping, no small talk with a stranger. the math wasn't hard for me honestly."
+        quote="a real massage near me runs ninety bucks and I'd maybe go twice a year if I was lucky, and this thing basically paid for itself in a month and it just sits there ready whenever my neck acts up, no booking it, no tipping, no awkward small talk with a stranger, so the math honestly wasn't hard for me at all."
       />
 
       <CostCallout />
       <SectionTestimonial
         name="Karen D."
-        quote="I actually added up what I spent on spa days this year and felt a little sick about it. like genuinely. so paying once for something I use most nights just made more sense in my head. I'm cheap, I'll admit it. this is the rare thing I don't regret."
+        quote="I actually sat down and added up what I'd spent on spa days this year and it made me a little sick to be honest, so paying one time for something I end up using most nights just made way more sense in my head, and I'm a cheap person, I'll fully admit that, and this is one of the rare things I've bought that I don't regret at all."
       />
 
       <SpecialOffer />
       <SectionTestimonial
         name="Bethany W."
-        quote="came for the massager, not gonna lie. but I ended up actually using the wind down guide too, which I did not expect. now the whole little routine before bed is kind of my favorite part of the day. my husband thinks I'm in a cult. whatever. it's nice."
+        quote="I came for the massager if I'm being honest and wasn't really expecting much from the rest of it, but I ended up actually using the wind down guide too and now the whole little routine before bed has kind of become my favorite part of the day, my husband keeps joking that I've joined a cult, whatever, it's nice and I don't care."
       />
 
       <MidPageCTA />
       <SectionTestimonial
         name="Chloe A."
-        quote="I sat on this for like a week before ordering. kept closing the tab. dumb, looking back, because the first night I used it I literally went oh. THAT'S what I've been missing. anyway. should've just bought it when I first saw it. that's my whole review I guess."
+        quote="I sat on this for a solid week before actually ordering, kept opening the tab and then closing it again, which looking back was so dumb because the very first night I used it I just remember going oh, that's what I've been missing this whole time, so yeah, I should've just clicked buy when I first saw it instead of overthinking the whole thing."
       />
 
       <ProductFAQ />
       <SectionTestimonial
         name="Natalie G."
-        quote="I had a million questions before buying, I'm annoying like that. read all the little answers first. ordered it, showed up in a few days, does exactly what they said. no weird surprises, no fine print nonsense. which, these days, kind of shocked me. in a good way."
+        quote="I had about a million questions before buying because I'm annoying like that and I read through every little answer first, and then I ordered it and it showed up in a few days and it does exactly what they said it would, no weird surprises, no fine print nonsense, which honestly kind of shocked me these days, in a good way."
       />
 
       <RiskFreeGuarantee />
       <SectionTestimonial
         name="Steph R."
-        quote="the only reason I even risked it was the money back thing. figured worst case I send it back and I'm out nothing. three months later I'm obviously keeping it. but yeah. not feeling like I was gambling eighty bucks on some internet gadget is what got me to actually click buy."
+        quote="the only reason I even risked it was the money back thing, I figured worst case I just send it back and I'm out nothing, and three months later I'm very obviously keeping it, but not feeling like I was gambling eighty bucks on some random internet gadget is genuinely what got me to actually go through with clicking buy."
       />
 
       <ProductReviews />
