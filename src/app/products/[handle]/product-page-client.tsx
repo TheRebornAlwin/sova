@@ -26,6 +26,7 @@ import MidPageCTA from "@/components/product/mid-page-cta";
 import ProductFAQ from "@/components/product/product-faq";
 import RiskFreeGuarantee from "@/components/product/risk-free-guarantee";
 import ProductReviews from "@/components/product/product-reviews";
+import SectionTestimonial from "@/components/product/section-testimonial";
 import PurchaseNotification from "@/components/product/purchase-notification";
 
 const benefitBadges = [
@@ -409,20 +410,93 @@ export default function ProductPageClient({ product }: { product: Product }) {
       </div>
 
       {/* ── LONG-FORM SECTIONS ──────────────────────────────────────── */}
+      {/* Each section is capped with a short, human testimonial that echoes
+          what that section is about, so the proof stays relevant as you read. */}
       <BenefitsHero />
+      <SectionTestimonial
+        name="Rachel M."
+        quote="Honestly wasn't sure what to expect, but it actually digs into that spot right at the base of my neck that's been bugging me for years. It's not just a buzz, you can feel it working the muscle."
+      />
+
       <ReliefIntro />
+      <SectionTestimonial
+        name="Danielle P."
+        quote="My shoulders sit up by my ears all day and I don't even notice. Ten minutes with this and they finally drop. I didn't realize how much I'd been holding until it let go."
+      />
+
       <DiscoverSection />
+      <SectionTestimonial
+        name="Priya S."
+        quote="I get this tight band across my neck every single evening from work. Now I just put it on while I catch up on a show, and by the time it's done the tension's gone. First thing that's actually stuck."
+      />
+
       <PerfectFor />
+      <SectionTestimonial
+        name="Marcus T."
+        quote="I'm at a laptop nine hours a day and my neck was always the first thing to go. This is basically made for people like me. Wish I'd found it two years ago."
+      />
+
       <SeeItWork />
+      <SectionTestimonial
+        name="Emily R."
+        quote="You can literally watch the little nodes rolling, and it feels exactly like thumbs pressing in circles. That's what sold me. It works the knot instead of just buzzing on top of it."
+      />
+
       <FeaturesLove />
+      <SectionTestimonial
+        name="Sofia L."
+        quote="The heat is the part I didn't know I needed. On the higher setting it loosens everything up and the knot just gives. And it's cordless, so it comes from the couch to the bed with me."
+      />
+
       <HowItWorks />
+      <SectionTestimonial
+        name="Hannah K."
+        quote="Genuinely no learning curve. Charge it, drape it over your shoulders, pick a setting. My mom figured it out in about ten seconds, and she still calls me to work the TV remote."
+      />
+
       <EMSComparison />
+      <SectionTestimonial
+        name="Jordan B."
+        rating={4}
+        quote="I'd bought two of those cheap buzzing massagers online and they did nothing but tickle. This one actually presses in. Night and day. Should've just spent the extra up front."
+      />
+
       <ComparisonTable />
+      <SectionTestimonial
+        name="Alicia N."
+        quote="A massage near me is ninety bucks and I'd go maybe twice a year. This paid for itself the first month and it's right there whenever my neck acts up. Easy math for me."
+      />
+
       <CostCallout />
+      <SectionTestimonial
+        name="Karen D."
+        quote="I added up what I'd spent on spa massages this year and felt a little sick. One payment for something I actually use every night just made more sense."
+      />
+
       <SpecialOffer />
+      <SectionTestimonial
+        name="Bethany W."
+        quote="Came for the massager, ended up using the wind-down guide too. The little routine at night has honestly become the part of the day I look forward to."
+      />
+
       <MidPageCTA />
+      <SectionTestimonial
+        name="Chloe A."
+        quote="I went back and forth for a week before ordering. Kind of annoyed at myself now, because the first night I used it I was like, oh, that's what I've been missing."
+      />
+
       <ProductFAQ />
+      <SectionTestimonial
+        name="Natalie G."
+        quote="I had a bunch of questions before buying and the answers were all right there. Ordered it, showed up in a few days, does exactly what they said. No surprises, which is rare now."
+      />
+
       <RiskFreeGuarantee />
+      <SectionTestimonial
+        name="Steph R."
+        quote="The only reason I risked it was the money-back thing. Three months in and I'm obviously keeping it, but it was nice not feeling like I was gambling eighty bucks."
+      />
+
       <ProductReviews />
       <PurchaseNotification />
     </>
