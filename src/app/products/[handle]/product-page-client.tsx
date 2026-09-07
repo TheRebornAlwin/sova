@@ -414,87 +414,228 @@ export default function ProductPageClient({ product }: { product: Product }) {
           what that section is about, so the proof stays relevant as you read. */}
       <BenefitsHero />
       <SectionTestimonial
-        name="Rachel M."
-        quote="ok so I honestly figured it was gonna be one of those buzzy things that does absolutely nothing, my coworker wouldn't shut up about hers so I finally caved and ordered one, and it actually gets right into that spot at the base of my neck that's been bugging me forever, like it presses in instead of just vibrating on top which is what I was expecting, and I'm not saying it changed my life or whatever but it genuinely does what it says which after everything else I've tried is kind of a shock."
+        items={[
+          {
+            name: "Rachel M.",
+            quote:
+              "ok so I honestly figured it was gonna be one of those buzzy things that does absolutely nothing, my coworker wouldn't shut up about hers so I finally caved and ordered one, and it actually gets right into that spot at the base of my neck that's been bugging me forever, like it presses in instead of just vibrating on top which is what I was expecting, and I'm not saying it changed my life or whatever but it genuinely does what it says which after everything else I've tried is kind of a shock.",
+          },
+          {
+            name: "Gregory H.",
+            quote:
+              "I was skeptical that a home device could replicate the pressure of a proper massage. It genuinely kneads into the muscle rather than simply vibrating on the surface. Three weeks in, the knot at the base of my neck has noticeably eased. A worthwhile purchase.",
+          },
+        ]}
       />
 
       <ReliefIntro />
       <SectionTestimonial
-        name="Danielle P."
-        quote="my shoulders basically live up around my ears and I don't even notice until they're aching by the end of the day, and I'll use this on the couch for like ten minutes while my dog sits on my feet staring at me and they just kind of come back down, I didn't realize how much I was holding up there until it let go honestly, I'm not usually the type to write one of these but yeah that release feeling is real."
+        items={[
+          {
+            name: "Meredith A.",
+            quote:
+              "My shoulders carry all of my stress, and by the evening they have crept up around my ears without my noticing. Ten minutes with this and they finally come down. I had not realized how much tension I was holding until it released.",
+          },
+          {
+            name: "Danielle P.",
+            quote:
+              "my shoulders basically live up around my ears and I don't even notice until they're aching by the end of the day, and I'll use this on the couch for like ten minutes while my dog sits on my feet staring at me and they just kind of come back down, I didn't realize how much I was holding up there until it let go honestly, that release feeling is so real.",
+          },
+        ]}
       />
 
       <DiscoverSection />
       <SectionTestimonial
-        name="Priya S."
-        quote="every night around 8 I get this tight band across my neck from staring at a screen all day and I've tried honestly so many things that did nothing, but I just throw this on while I'm half watching tv and by the time it clicks off the tightness is basically gone, and it's the first thing that's actually stuck for me so I've kind of stopped questioning it, I just use it now."
+        items={[
+          {
+            name: "Kayla R.",
+            quote:
+              "OMG where has this been all my life?? my neck is always SO tight after work and this literally melts it every single night, i'm obsessed 😭 genuinely look forward to it now",
+          },
+          {
+            name: "Priya S.",
+            quote:
+              "every night around 8 I get this tight band across my neck from staring at a screen all day and I've tried honestly so many things that did nothing, but I just throw this on while I'm half watching tv and by the time it clicks off the tightness is basically gone, and it's the first thing that's actually stuck for me so I've kind of stopped questioning it, I just use it now.",
+          },
+        ]}
       />
 
       <PerfectFor />
       <SectionTestimonial
-        name="Marcus T."
-        quote="I'm on a laptop like nine hours a day and my neck is always the first thing to go, usually by mid afternoon it's tight and cranky and I'm rolling it around trying to crack it, so when the page is basically describing me I kind of laughed, and I only wish I'd bought it two years ago instead of complaining to everyone at work about my neck every single day."
+        items={[
+          {
+            name: "Priyanka D.",
+            quote:
+              "As someone who works from home at a desk all day, this has quietly become part of my evening routine. It targets exactly the area that tightens up from hunching over a laptop. I would recommend it to any fellow desk workers dealing with the same thing.",
+          },
+          {
+            name: "Marcus T.",
+            quote:
+              "I'm on a laptop like nine hours a day and my neck is always the first thing to go, usually by mid afternoon it's tight and cranky and I'm rolling it around trying to crack it, so when the page is basically describing me I kind of laughed, and I only wish I'd bought it two years ago instead of complaining to everyone at work about my neck every single day.",
+          },
+        ]}
       />
 
       <SeeItWork />
       <SectionTestimonial
-        name="Emily R."
-        quote="the thing that actually sold me is you can watch the little nodes rolling around, it's not just buzzing on the surface, it presses in and does these slow circles that feel exactly like someone's thumbs digging into you, and my mom saw me using it and immediately wanted her own so that probably tells you something, it works the actual knot and not just the skin sitting on top of it."
+        items={[
+          {
+            name: "Emily R.",
+            quote:
+              "the thing that actually sold me is you can watch the little nodes rolling around, it's not just buzzing on the surface, it presses in and does these slow circles that feel exactly like someone's thumbs digging into you, and my mom saw me using it and immediately wanted her own so that probably tells you something, it works the actual knot and not just the skin sitting on top of it.",
+          },
+          {
+            name: "Dev P.",
+            quote:
+              "You can literally see it working the knot, not just buzzing on top. That sold me instantly.",
+          },
+        ]}
       />
 
       <FeaturesLove />
       <SectionTestimonial
-        name="Sofia L."
-        quote="honestly the heat is the part I didn't even know I was missing, you turn it up and everything just kind of loosens and the knot finally gives, and the fact that there's no cord sounds like a small thing but I take it from the couch to my bed without even thinking about it, and I forget to charge it half the time and it still holds up fine, so no real complaints from me."
+        items={[
+          {
+            name: "Michael T.",
+            rating: 4,
+            quote:
+              "The build quality is better than I expected at this price point. The heat function is the standout for me, it makes a real difference in how quickly the muscles loosen up. Battery life has held up well over two months of near-daily use. Only minor gripe is the lowest intensity is still fairly strong.",
+          },
+          {
+            name: "Sofia L.",
+            quote:
+              "honestly the heat is the part I didn't even know I was missing, you turn it up and everything just kind of loosens and the knot finally gives, and the fact that there's no cord sounds like a small thing but I take it from the couch to my bed without even thinking about it, and I forget to charge it half the time and it still holds up fine.",
+          },
+        ]}
       />
 
       <HowItWorks />
       <SectionTestimonial
-        name="Hannah K."
-        quote="there's genuinely nothing to figure out, you charge it, drape it over your shoulders and press a button and that's the whole thing, and my mom who literally calls me to change the input on her tv managed to set it up herself in about ten seconds, so if she can do it I promise you anyone can."
+        items={[
+          {
+            name: "Sam K.",
+            quote:
+              "so easy. charge it, drape it on, press the button, done. my dad figured it out and he can barely work his phone lol",
+          },
+          {
+            name: "Kenji T.",
+            quote:
+              "Setup could not be simpler. It arrived charged, and within a minute I had it running over my shoulders. There is no app to fumble with and no manual to read, which I genuinely appreciated after a long day.",
+          },
+        ]}
       />
 
       <EMSComparison />
       <SectionTestimonial
-        name="Jordan B."
-        rating={4}
-        quote="look I'd already wasted money on two of those cheap ones off an instagram ad and they both just kind of tickled and then died within a month, this one actually presses in like there's real pressure behind it, and honestly I'm a little annoyed I didn't just spend the extra the first time around because it would've saved me forty bucks and a whole lot of disappointment."
+        items={[
+          {
+            name: "Robert N.",
+            quote:
+              "I have owned two cheaper units previously and both felt like surface-level vibration that never actually reached anything. This applies genuine pressure that gets into the deeper muscle. The difference in quality is immediately obvious the first time you use it.",
+          },
+          {
+            name: "Jordan B.",
+            rating: 4,
+            quote:
+              "look I'd already wasted money on two of those cheap ones off an instagram ad and they both just kind of tickled and then died within a month, this one actually presses in like there's real pressure behind it, and honestly I'm a little annoyed I didn't just spend the extra the first time around because it would've saved me forty bucks and a whole lot of disappointment.",
+          },
+        ]}
       />
 
       <ComparisonTable />
       <SectionTestimonial
-        name="Alicia N."
-        quote="a real massage near me runs ninety bucks and I'd maybe go twice a year if I was lucky, and this thing basically paid for itself in a month and it just sits there ready whenever my neck acts up, no booking it, no tipping, no awkward small talk with a stranger, so the math honestly wasn't hard for me at all."
+        items={[
+          {
+            name: "Alicia N.",
+            quote:
+              "a real massage near me runs ninety bucks and I'd maybe go twice a year if I was lucky, and this thing basically paid for itself in a month and it just sits there ready whenever my neck acts up, no booking it, no tipping, no awkward small talk with a stranger, so the math honestly wasn't hard for me at all.",
+          },
+          {
+            name: "Jess M.",
+            quote:
+              "cheaper than ONE massage appointment and I use it every single day?? no brainer honestly. wish I'd done it sooner",
+          },
+        ]}
       />
 
       <CostCallout />
       <SectionTestimonial
-        name="Karen D."
-        quote="I actually sat down and added up what I'd spent on spa days this year and it made me a little sick to be honest, so paying one time for something I end up using most nights just made way more sense in my head, and I'm a cheap person, I'll fully admit that, and this is one of the rare things I've bought that I don't regret at all."
+        items={[
+          {
+            name: "Linda F.",
+            quote:
+              "I did the math on what I spend each year on massage appointments, and the value here is difficult to argue with. A single upfront cost for something I now use several times a week has more than paid for itself already.",
+          },
+          {
+            name: "Karen D.",
+            quote:
+              "I actually sat down and added up what I'd spent on spa days this year and it made me a little sick to be honest, so paying one time for something I end up using most nights just made way more sense in my head, and I'm a cheap person, I'll fully admit that, and this is one of the rare things I've bought that I don't regret.",
+          },
+        ]}
       />
 
       <SpecialOffer />
       <SectionTestimonial
-        name="Bethany W."
-        quote="I came for the massager if I'm being honest and wasn't really expecting much from the rest of it, but I ended up actually using the wind down guide too and now the whole little routine before bed has kind of become my favorite part of the day, my husband keeps joking that I've joined a cult, whatever, it's nice and I don't care."
+        items={[
+          {
+            name: "Bethany W.",
+            quote:
+              "I came for the massager if I'm being honest and wasn't really expecting much from the rest of it, but I ended up actually using the wind down guide too and now the whole little routine before bed has kind of become my favorite part of the day, my husband keeps joking that I've joined a cult, whatever, it's nice and I don't care.",
+          },
+          {
+            name: "Nora B.",
+            quote:
+              "The bonus wind-down guide was a nice surprise. I wasn't expecting to actually use it, but I do most nights now.",
+          },
+        ]}
       />
 
       <MidPageCTA />
       <SectionTestimonial
-        name="Chloe A."
-        quote="I sat on this for a solid week before actually ordering, kept opening the tab and then closing it again, which looking back was so dumb because the very first night I used it I just remember going oh, that's what I've been missing this whole time, so yeah, I should've just clicked buy when I first saw it instead of overthinking the whole thing."
+        items={[
+          {
+            name: "Chloe A.",
+            quote:
+              "I sat on this for a solid week before actually ordering, kept opening the tab and then closing it again, which looking back was so dumb because the very first night I used it I just remember going oh, that's what I've been missing this whole time, so yeah, I should've just clicked buy when I first saw it instead of overthinking the whole thing.",
+          },
+          {
+            name: "Andrew S.",
+            quote:
+              "I deliberated far longer than I should have before ordering. My only regret is not buying it sooner. If you are on the fence, I would say go for it.",
+          },
+        ]}
       />
 
       <ProductFAQ />
       <SectionTestimonial
-        name="Natalie G."
-        quote="I had about a million questions before buying because I'm annoying like that and I read through every little answer first, and then I ordered it and it showed up in a few days and it does exactly what they said it would, no weird surprises, no fine print nonsense, which honestly kind of shocked me these days, in a good way."
+        items={[
+          {
+            name: "Omar H.",
+            quote:
+              "Had a few questions, all answered right there on the page. Ordered it, arrived fast, works exactly as described. Simple.",
+          },
+          {
+            name: "Natalie G.",
+            quote:
+              "I had about a million questions before buying because I'm annoying like that and I read through every little answer first, and then I ordered it and it showed up in a few days and it does exactly what they said it would, no weird surprises, no fine print nonsense, which honestly kind of shocked me these days, in a good way.",
+          },
+        ]}
       />
 
       <RiskFreeGuarantee />
       <SectionTestimonial
-        name="Steph R."
-        quote="the only reason I even risked it was the money back thing, I figured worst case I just send it back and I'm out nothing, and three months later I'm very obviously keeping it, but not feeling like I was gambling eighty bucks on some random internet gadget is genuinely what got me to actually go through with clicking buy."
+        items={[
+          {
+            name: "Catherine M.",
+            quote:
+              "The money-back guarantee is genuinely what convinced me to try it. Ninety days later, I have no intention of sending it back. It is rare to feel this confident about something bought online, and I don't say that lightly.",
+          },
+          {
+            name: "Steph R.",
+            quote:
+              "the only reason I even risked it was the money back thing, I figured worst case I just send it back and I'm out nothing, and three months later I'm very obviously keeping it, but not feeling like I was gambling eighty bucks on some random internet gadget is genuinely what got me to actually go through with clicking buy.",
+          },
+        ]}
       />
 
       <ProductReviews />

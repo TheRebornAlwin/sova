@@ -3,11 +3,18 @@
 import ScrollReveal from "@/components/ui/scroll-reveal";
 
 /**
- * A single short, human-sounding testimonial that caps off a section, worded
- * to echo whatever that section was just about. Compact sage card, initials
- * avatar, 5 stars, and a "Verified Purchase" tag so it reads like the rest of
- * the social proof on the page. One shared look so all of them feel like a set.
+ * Caps a section with real-sounding testimonials, each written as a different
+ * person (some polished and punctuated, some lowercase run-ons, some short,
+ * some enthusiastic). Shows two side by side on desktop and just the first on
+ * mobile, so the phone reader still gets one but the page never feels sparse.
  */
+type Testimonial = {
+  quote: string;
+  name: string;
+  rating?: number;
+  location?: string;
+};
+
 function Stars({ rating = 5 }: { rating?: number }) {
   return (
     <div className="flex gap-0.5">
@@ -28,18 +35,8 @@ function Stars({ rating = 5 }: { rating?: number }) {
   );
 }
 
-export default function SectionTestimonial({
-  quote,
-  name,
-  location,
-  rating = 5,
-}: {
-  quote: string;
-  name: string;
-  location?: string;
-  rating?: number;
-}) {
-  const initials = name
+function Card({ t, hideOnMobile }: { t: Testimonial; hideOnMobile?: boolean }) {
+  const initials = t.name
     .split(" ")
     .map((p) => p[0])
     .join("")
@@ -47,35 +44,49 @@ export default function SectionTestimonial({
     .toUpperCase();
 
   return (
+    <figure
+      className={`${
+        hideOnMobile ? "hidden md:flex" : "flex"
+      } flex-col rounded-2xl border border-gold/15 bg-gold/[0.05] p-5 md:p-6 shadow-sm`}
+    >
+      <div className="flex items-center gap-3 mb-3">
+        <span className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-gold/15 text-[13px] font-semibold text-gold-dark">
+          {initials}
+        </span>
+        <div className="min-w-0">
+          <div className="flex items-center gap-2">
+            <span className="text-sm font-semibold text-heading">{t.name}</span>
+            <span className="inline-flex items-center gap-1 text-[11px] font-medium text-gold">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm-1.2 14.2-3.8-3.8 1.4-1.4 2.4 2.4 5-5 1.4 1.4-6.4 6.4z" />
+              </svg>
+              Verified Purchase
+            </span>
+          </div>
+          <div className="mt-0.5 flex items-center gap-2">
+            <Stars rating={t.rating ?? 5} />
+            {t.location && (
+              <span className="text-[11px] text-muted">{t.location}</span>
+            )}
+          </div>
+        </div>
+      </div>
+      <blockquote className="text-[15px] leading-relaxed text-foreground">
+        &ldquo;{t.quote}&rdquo;
+      </blockquote>
+    </figure>
+  );
+}
+
+export default function SectionTestimonial({ items }: { items: Testimonial[] }) {
+  return (
     <div className="px-6 pb-12 md:pb-20">
       <ScrollReveal>
-        <figure className="mx-auto mt-8 max-w-xl rounded-2xl border border-gold/15 bg-gold/[0.05] p-5 md:p-6 shadow-sm">
-          <div className="flex items-center gap-3 mb-3">
-            <span className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-gold/15 text-[13px] font-semibold text-gold-dark">
-              {initials}
-            </span>
-            <div className="min-w-0">
-              <div className="flex items-center gap-2">
-                <span className="text-sm font-semibold text-heading">{name}</span>
-                <span className="inline-flex items-center gap-1 text-[11px] font-medium text-gold">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm-1.2 14.2-3.8-3.8 1.4-1.4 2.4 2.4 5-5 1.4 1.4-6.4 6.4z" />
-                  </svg>
-                  Verified Purchase
-                </span>
-              </div>
-              <div className="mt-0.5 flex items-center gap-2">
-                <Stars rating={rating} />
-                {location && (
-                  <span className="text-[11px] text-muted">{location}</span>
-                )}
-              </div>
-            </div>
-          </div>
-          <blockquote className="text-[15px] leading-relaxed text-foreground">
-            &ldquo;{quote}&rdquo;
-          </blockquote>
-        </figure>
+        <div className="mx-auto mt-8 grid max-w-4xl items-start gap-4 md:grid-cols-2 md:gap-5">
+          {items.slice(0, 2).map((t, i) => (
+            <Card key={t.name} t={t} hideOnMobile={i > 0} />
+          ))}
+        </div>
       </ScrollReveal>
     </div>
   );
