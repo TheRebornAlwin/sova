@@ -47,9 +47,9 @@ export default function SectionTestimonial({
     .toUpperCase();
 
   return (
-    <div className="px-6">
+    <div className="px-6 pb-12 md:pb-20">
       <ScrollReveal>
-        <figure className="mx-auto mt-10 max-w-xl rounded-2xl border border-gold/15 bg-gold/[0.05] p-5 md:p-6 shadow-sm">
+        <figure className="mx-auto mt-8 max-w-xl rounded-2xl border border-gold/15 bg-gold/[0.05] p-5 md:p-6 shadow-sm">
           <div className="flex items-center gap-3 mb-3">
             <span className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-gold/15 text-[13px] font-semibold text-gold-dark">
               {initials}
