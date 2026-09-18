@@ -3,6 +3,7 @@
 import Image from "next/image";
 import ScrollReveal from "@/components/ui/scroll-reveal";
 import InlineCTA from "@/components/product/inline-cta";
+import { TrapeziusDiagram } from "@/components/product/mechanism-diagrams";
 
 // The Nuro's benefit is visible, the nodes physically knead the muscle, so this
 // slot shows a real demo shot rather than an illustrated diagram. Drop a real
@@ -60,6 +61,16 @@ export default function SeeItWork() {
                 </div>
               ))}
             </div>
+
+            {/* Where the knot actually sits, so the "reaches the base of your
+                neck" point lands visually instead of as one more sentence. */}
+            <figure className="mt-8 rounded-2xl border border-black/[0.06] bg-surface-raised p-5">
+              <TrapeziusDiagram />
+              <figcaption className="mt-2 text-xs text-muted text-center">
+                It reaches the tight band across the top of your shoulders, right
+                where you can never quite work it out yourself.
+              </figcaption>
+            </figure>
           </ScrollReveal>
         </div>
         <InlineCTA label="Put it to work" />

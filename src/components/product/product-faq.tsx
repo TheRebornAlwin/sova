@@ -6,6 +6,11 @@ import ScrollReveal from "@/components/ui/scroll-reveal";
 
 const faqItems = [
   {
+    question: "Is it as good as a real massage?",
+    answer:
+      "Our customers tell us it feels about the same, and every time you reach for it it's free and already sitting right there. A real massage is lovely, and some people will always prefer one. But not many of us have the time or the money to book one every single time our neck acts up. That's the whole reason we made the Nuro.",
+  },
+  {
     question: "How is this different from a cheap vibrating massager?",
     answer:
       "A vibrating pillow just shakes the surface, so it feels like something for a second and then your shoulders seize right back up. Nuro actually kneads, with rotating nodes that work the muscle the way hands do, plus real heat. That's the difference between a buzz and the tension actually releasing.",
