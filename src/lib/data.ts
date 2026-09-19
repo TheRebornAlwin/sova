@@ -103,7 +103,7 @@ export const heroProduct: Product = {
     "Run time: Up to 6 sessions per charge, silent 15-minute auto-off",
     "Fit: Contoured to sit on your neck and shoulders, completely hands-free",
     "Warranty: 2-year free replacement if it ever stops working",
-    "In the box: Nuro, USB-C cable, travel pouch, plus The Trigger Points Map (digital)",
+    "In the box: Nuro, USB-C cable, plus all three digital bonuses: The Trigger Points Map, The 10-Minute Wind-Down guide, and Handcrafted Wind-Down Audio",
   ],
   category: "Wellness & Self-Care",
 };
