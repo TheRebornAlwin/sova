@@ -277,12 +277,6 @@ export default function ProductPageClient({ product }: { product: Product }) {
               </span>
             </div>
 
-            <div className="mt-3">
-              <p className="text-sm font-medium text-gold">
-                This is the lowest price we offer the Nuro.
-              </p>
-            </div>
-
             {/* Benefit badges */}
             <div className="mt-6 grid grid-cols-3 gap-3">
               {benefitBadges.map((b) => (
