@@ -14,7 +14,7 @@ const rows = [
   { label: "Price", nuro: "$79.99 once", massage: "$90+ per visit", cheap: "$20-40" },
   { label: "Actually kneads the deep knot", nuro: true, massage: true, cheap: false },
   { label: "There the moment your shoulders seize up", nuro: true, massage: false, cheap: true },
-  { label: "How often you'll actually use it", nuro: "Most nights", massage: "A few times a year", cheap: "Til it breaks" },
+  { label: "Feels like real hands, not hard plastic", nuro: true, massage: true, cheap: false },
   { label: "No appointment, nothing to schedule", nuro: true, massage: false, cheap: true },
   { label: "Soothing heat built in", nuro: true, massage: false, cheap: false },
   { label: "One cost, use it forever", nuro: true, massage: false, cheap: true },

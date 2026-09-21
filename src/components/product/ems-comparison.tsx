@@ -1,7 +1,6 @@
 "use client";
 
 import ScrollReveal from "@/components/ui/scroll-reveal";
-import { SurfaceBuzzDiagram, KneadDiagram } from "@/components/product/mechanism-diagrams";
 
 export default function EMSComparison() {
   return (
@@ -14,15 +13,7 @@ export default function EMSComparison() {
               Cheap vibration vs the Nuro
             </h2>
             <p className="mt-6 text-[15px] md:text-base text-slate leading-relaxed max-w-2xl mx-auto text-center">
-              <span className="font-semibold text-heading">Here&apos;s the tell before you spend a cent:</span>{" "}
-              watch what it does to the muscle. A buzzing gadget only shakes the
-              surface, so your shoulders seize right back up the second you switch
-              it off.
-            </p>
-            <p className="mt-3 text-[15px] md:text-base text-slate leading-relaxed max-w-2xl mx-auto text-center">
-              Real release needs rotating nodes that press in like a thumb, plus
-              heat to help the muscle loosen. That costs more to build, which is why
-              the cheap ones only ever buzz.
+              How to tell if a massager will actually work, before you waste money on it: watch what it does to the muscle. If it vibrates, it only shakes the surface, and the muscle tenses right back up the second you stop. Real release needs rotating nodes that press into the muscle like a thumb, plus real heat to let it loosen. Notice how the cheap ones never actually show the nodes kneading, and never mention the heat? There&apos;s a reason. It costs more to build a massager that truly kneads and heats than one that just buzzes. The Nuro is built the expensive way, because it&apos;s the only way that works.
             </p>
           </div>
         </ScrollReveal>
@@ -34,8 +25,20 @@ export default function EMSComparison() {
                 OLD WAY
               </div>
               <div className="mb-6 mt-4">
-                <div className="w-full rounded-xl bg-black/[0.02] px-4 py-3">
-                  <SurfaceBuzzDiagram />
+                <div className="w-full h-40 rounded-xl bg-black/[0.02] flex items-center justify-center relative overflow-hidden">
+                  <div className="relative w-48">
+                    <div className="text-center text-[10px] text-lavender font-medium mb-3">STILL TIGHT AFTER</div>
+                    <div className="space-y-2">
+                      <div className="h-4 bg-black/[0.05] rounded" />
+                      <div className="h-4 bg-black/[0.05] rounded" />
+                      <div className="h-4 bg-black/[0.03] rounded" />
+                    </div>
+                    <div className="flex justify-center gap-2 mt-4">
+                      <span className="w-2.5 h-2.5 rounded-full bg-[#b04a4a]/50" />
+                      <span className="w-2.5 h-2.5 rounded-full bg-[#b04a4a]/40" />
+                      <span className="w-2.5 h-2.5 rounded-full bg-[#b04a4a]/50" />
+                    </div>
+                  </div>
                 </div>
               </div>
               <h3 className="text-xl font-heading font-medium text-lavender mb-2 text-center md:text-left">Cheap buzzing gadgets</h3>
@@ -55,13 +58,24 @@ export default function EMSComparison() {
                 NURO
               </div>
               <div className="mb-6 mt-4">
-                <div className="w-full rounded-xl bg-gold/5 px-4 py-3">
-                  <KneadDiagram />
+                <div className="w-full h-40 rounded-xl bg-gold/5 flex items-center justify-center relative overflow-hidden">
+                  <div className="relative w-48">
+                    <div className="text-center text-[10px] text-gold font-medium mb-3">REAL KNEADING</div>
+                    <div className="space-y-2">
+                      <div className="h-4 bg-gold/15 rounded" />
+                      <div className="h-4 bg-gold/20 rounded" />
+                      <div className="h-4 bg-gold/25 rounded" />
+                    </div>
+                    <div className="text-center text-[10px] text-gold font-medium mt-3">TENSION, RELEASED</div>
+                    <div className="absolute top-10 left-1/2 -translate-x-1/2">
+                      <div className="w-8 h-8 rounded-full border border-gold/30 animate-ping" />
+                    </div>
+                  </div>
                 </div>
               </div>
               <h3 className="text-xl font-heading font-medium text-heading mb-2 text-center md:text-left">Rotating nodes and real heat</h3>
               <p className="text-sm text-slate leading-relaxed mb-4 text-center md:text-left">
-                Rotating nodes and real heat that get into the knot in about ten quiet minutes, every time you need it, not just the few times a year you actually book a massage.
+                It works the muscle the way a therapist would, in about ten quiet minutes. The last calm thing you do before you unwind, not another gadget you give up on.
               </p>
               <div className="flex items-center gap-2 text-gold justify-center md:justify-start">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
