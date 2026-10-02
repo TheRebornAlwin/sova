@@ -86,7 +86,7 @@ const trustBadges = [
 
 // The gallery's first slot can be a short demo video (.mp4); every other slot
 // is a still image. We branch on the extension so nothing else has to change.
-const VIDEO_POSTER = "/products/nuro-demo-v2.webp";
+const VIDEO_POSTER = "/products/nuro-ugc-poster.webp";
 const isVideo = (src: string) => src.endsWith(".mp4");
 
 export default function ProductPageClient({ product }: { product: Product }) {
@@ -170,10 +170,10 @@ export default function ProductPageClient({ product }: { product: Product }) {
               >
                 {mobileSlides.map((src, i) => (
                   <div key={i} className="relative w-full flex-shrink-0 snap-center">
-                    <div className="relative aspect-square rounded-3xl overflow-hidden bg-gradient-to-br from-gold-light via-surface to-gold-light border border-black/[0.06]">
+                    <div className={`relative aspect-square rounded-3xl ${isVideo(src) ? "flex items-center justify-center" : "overflow-hidden bg-gradient-to-br from-gold-light via-surface to-gold-light border border-black/[0.06]"}`}>
                       {isVideo(src) ? (
                         <video
-                          className="w-full h-full object-contain bg-black"
+                          className="h-full w-auto rounded-3xl"
                           autoPlay
                           muted
                           playsInline
@@ -211,7 +211,7 @@ export default function ProductPageClient({ product }: { product: Product }) {
 
             {/* Desktop gallery */}
             <div className="hidden md:block md:sticky md:top-28">
-              <div className="relative aspect-square rounded-3xl overflow-hidden bg-gradient-to-br from-gold-light via-surface to-gold-light border border-black/[0.06]">
+              <div className={`relative aspect-square rounded-3xl ${isVideo(product.images[selectedImage]) ? "flex items-center justify-center" : "overflow-hidden bg-gradient-to-br from-gold-light via-surface to-gold-light border border-black/[0.06]"}`}>
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={selectedImage}
@@ -219,11 +219,11 @@ export default function ProductPageClient({ product }: { product: Product }) {
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.3 }}
-                    className="absolute inset-0"
+                    className="absolute inset-0 flex items-center justify-center"
                   >
                     {isVideo(product.images[selectedImage]) ? (
                       <video
-                        className="w-full h-full object-contain bg-black"
+                        className="h-full w-auto rounded-3xl"
                         autoPlay
                         muted
                         playsInline
