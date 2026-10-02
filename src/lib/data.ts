@@ -53,6 +53,7 @@ export const heroProduct: Product = {
   // and the gallery/thumbnails expand automatically. Filename is versioned
   // (-v2) to bust browser/CDN cache when the image is replaced.
   images: [
+    "/products/nuro-ugc-demo.mp4",
     "/products/nuro-main-v2.webp",
     "/products/nuro-new-3.webp",
     "/products/nuro-new-1.webp",

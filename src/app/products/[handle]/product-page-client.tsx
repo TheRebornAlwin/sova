@@ -84,6 +84,11 @@ const trustBadges = [
   },
 ];
 
+// The gallery's first slot can be a short demo video (.mp4); every other slot
+// is a still image. We branch on the extension so nothing else has to change.
+const VIDEO_POSTER = "/products/nuro-demo-v2.webp";
+const isVideo = (src: string) => src.endsWith(".mp4");
+
 export default function ProductPageClient({ product }: { product: Product }) {
   const { addItem } = useCart();
   const [selectedImage, setSelectedImage] = useState(0);
@@ -142,7 +147,12 @@ export default function ProductPageClient({ product }: { product: Product }) {
     }
   };
 
-  const mobileSlides = [...product.images, product.images[0]];
+  // Loop-back slide duplicates the first image; if the first slot is the video,
+  // use the poster instead so we don't mount a second autoplaying <video>.
+  const mobileSlides = [
+    ...product.images,
+    isVideo(product.images[0]) ? VIDEO_POSTER : product.images[0],
+  ];
 
   return (
     <>
@@ -161,14 +171,28 @@ export default function ProductPageClient({ product }: { product: Product }) {
                 {mobileSlides.map((src, i) => (
                   <div key={i} className="relative w-full flex-shrink-0 snap-center">
                     <div className="relative aspect-square rounded-3xl overflow-hidden bg-gradient-to-br from-gold-light via-surface to-gold-light border border-black/[0.06]">
-                      <Image
-                        src={src}
-                        alt={`${product.title} view ${i + 1}`}
-                        width={600}
-                        height={600}
-                        priority={i === 0}
-                        className="w-full h-full object-cover"
-                      />
+                      {isVideo(src) ? (
+                        <video
+                          className="w-full h-full object-contain bg-black"
+                          autoPlay
+                          muted
+                          playsInline
+                          controls
+                          preload="metadata"
+                          poster={VIDEO_POSTER}
+                        >
+                          <source src={src} type="video/mp4" />
+                        </video>
+                      ) : (
+                        <Image
+                          src={src}
+                          alt={`${product.title} view ${i + 1}`}
+                          width={600}
+                          height={600}
+                          priority={i === 0}
+                          className="w-full h-full object-cover"
+                        />
+                      )}
                     </div>
                   </div>
                 ))}
@@ -197,14 +221,28 @@ export default function ProductPageClient({ product }: { product: Product }) {
                     transition={{ duration: 0.3 }}
                     className="absolute inset-0"
                   >
-                    <Image
-                      src={product.images[selectedImage]}
-                      alt={`${product.title} view ${selectedImage + 1}`}
-                      width={700}
-                      height={700}
-                      priority
-                      className="w-full h-full object-cover"
-                    />
+                    {isVideo(product.images[selectedImage]) ? (
+                      <video
+                        className="w-full h-full object-contain bg-black"
+                        autoPlay
+                        muted
+                        playsInline
+                        controls
+                        preload="metadata"
+                        poster={VIDEO_POSTER}
+                      >
+                        <source src={product.images[selectedImage]} type="video/mp4" />
+                      </video>
+                    ) : (
+                      <Image
+                        src={product.images[selectedImage]}
+                        alt={`${product.title} view ${selectedImage + 1}`}
+                        width={700}
+                        height={700}
+                        priority
+                        className="w-full h-full object-cover"
+                      />
+                    )}
                   </motion.div>
                 </AnimatePresence>
 
@@ -238,12 +276,17 @@ export default function ProductPageClient({ product }: { product: Product }) {
                     }`}
                   >
                     <Image
-                      src={src}
-                      alt={`Thumbnail ${i + 1}`}
+                      src={isVideo(src) ? VIDEO_POSTER : src}
+                      alt={isVideo(src) ? "Demo video" : `Thumbnail ${i + 1}`}
                       width={72}
                       height={72}
                       className="w-full h-full object-cover"
                     />
+                    {isVideo(src) && (
+                      <span className="absolute inset-0 flex items-center justify-center bg-black/25">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white" stroke="none"><path d="M8 5v14l11-7z"/></svg>
+                      </span>
+                    )}
                   </button>
                 ))}
               </div>
@@ -372,6 +415,17 @@ export default function ProductPageClient({ product }: { product: Product }) {
                 )}
               </CtaButton>
             </div>
+            <button
+              type="button"
+              onClick={() => {
+                setSelectedImage(0);
+                document.getElementById("buy")?.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="mt-3 inline-flex w-full items-center justify-center gap-1.5 text-sm font-medium text-gold hover:text-gold-dark transition-colors cursor-pointer"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8" fill="currentColor" stroke="none"/></svg>
+              Watch how it works
+            </button>
             {currentDiscount > 0 && (
               <p className="mt-2 text-xs text-gold font-medium text-center">
                 {currentDiscount}% bundle discount applied at checkout.
