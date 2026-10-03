@@ -123,6 +123,12 @@
   50% { opacity: 0.6; transform: scale(1.08); }
 }
 
+/* A gentle rightward nudge, for "swipe for more" hint arrows */
+@keyframes nudge-x {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(3px); }
+}
+
 /* Soft drifting light, like sun moving slowly across a calm room */
 @keyframes aurora-drift {
   0%   { transform: translate3d(-4%, -2%, 0) rotate(0deg) scale(1.05); }
