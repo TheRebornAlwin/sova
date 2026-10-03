@@ -121,6 +121,37 @@ export default function ProductPageClient({ product }: { product: Product }) {
     }
   }, [product]);
 
+  useEffect(() => {
+    // Browsers block UNMUTED autoplay with zero interaction, so the demo video
+    // starts muted (autoplay) and we unmute it on the viewer's first gesture
+    // anywhere on the page (click / tap / key / scroll). That first gesture is a
+    // "user activation," which is exactly what the browser requires to allow
+    // sound, so for most visitors the video is audible within a second.
+    let done = false;
+    const unmute = () => {
+      if (done) return;
+      const vids = Array.from(document.querySelectorAll("video"));
+      const v =
+        vids.find((el) => el.currentSrc.includes("nuro-ugc-demo") && el.offsetParent !== null) ||
+        vids.find((el) => el.currentSrc.includes("nuro-ugc-demo"));
+      if (!v) return;
+      done = true;
+      v.muted = false;
+      v.volume = 1;
+      v.play().catch(() => {});
+      cleanup();
+    };
+    // Only gestures that reliably grant audio "user activation" (a scroll/wheel
+    // does not always count, and would waste our one-shot unmute).
+    const events: (keyof WindowEventMap)[] = ["pointerdown", "touchstart", "keydown"];
+    const cleanup = () =>
+      events.forEach((e) => window.removeEventListener(e, unmute));
+    events.forEach((e) =>
+      window.addEventListener(e, unmute, { passive: true })
+    );
+    return cleanup;
+  }, []);
+
   const handleAddToCart = () => {
     addItem(
       {
