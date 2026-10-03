@@ -322,17 +322,6 @@ export default function ProductPageClient({ product }: { product: Product }) {
                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
                   </button>
                 )}
-                {selectedImage === 0 && (
-                  <button
-                    type="button"
-                    onClick={() => setSelectedImage(1)}
-                    aria-label="See product photos"
-                    className="absolute right-14 top-1/2 -translate-y-1/2 z-10 flex items-center gap-1.5 rounded-full bg-gold px-3.5 py-2 text-[13px] font-semibold text-white shadow-[0_5px_18px_rgba(138,154,130,0.5)] hover:bg-gold-dark transition-colors cursor-pointer"
-                  >
-                    Product photos
-                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="animate-[nudge-x_1s_ease-in-out_infinite]"><path d="M5 12h14" /><path d="M12 5l7 7-7 7" /></svg>
-                  </button>
-                )}
               </div>
 
               <div className="flex gap-2 mt-4 overflow-x-auto scrollbar-hide">
