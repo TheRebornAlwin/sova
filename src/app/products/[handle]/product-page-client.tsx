@@ -244,24 +244,26 @@ export default function ProductPageClient({ product }: { product: Product }) {
                 ))}
               </div>
               {activeSlide === 0 && (
-                <p className="mt-2.5 flex items-center justify-center gap-1.5 text-xs font-medium text-muted">
-                  Swipe for product photos
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="14"
-                    height="14"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="text-gold animate-[nudge-x_1.2s_ease-in-out_infinite]"
-                  >
-                    <path d="M5 12h14" />
-                    <path d="M12 5l7 7-7 7" />
-                  </svg>
-                </p>
+                <div className="mt-3 flex justify-center">
+                  <span className="inline-flex items-center gap-1.5 rounded-full bg-gold px-4 py-2 text-[13px] font-semibold text-white shadow-[0_5px_18px_rgba(138,154,130,0.45)]">
+                    Swipe for product photos
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="15"
+                      height="15"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="animate-[nudge-x_1s_ease-in-out_infinite]"
+                    >
+                      <path d="M5 12h14" />
+                      <path d="M12 5l7 7-7 7" />
+                    </svg>
+                  </span>
+                </div>
               )}
             </div>
 
@@ -314,9 +316,9 @@ export default function ProductPageClient({ product }: { product: Product }) {
                   </button>
                 )}
                 {selectedImage === 0 && (
-                  <div className="pointer-events-none absolute right-14 top-1/2 -translate-y-1/2 z-10 flex items-center gap-1 rounded-full bg-white/85 backdrop-blur-sm px-3 py-1 text-xs font-medium text-heading shadow-sm">
+                  <div className="pointer-events-none absolute right-14 top-1/2 -translate-y-1/2 z-10 flex items-center gap-1.5 rounded-full bg-gold px-3.5 py-2 text-[13px] font-semibold text-white shadow-[0_5px_18px_rgba(138,154,130,0.5)]">
                     Product photos
-                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-gold animate-[nudge-x_1.2s_ease-in-out_infinite]"><path d="M5 12h14" /><path d="M12 5l7 7-7 7" /></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="animate-[nudge-x_1s_ease-in-out_infinite]"><path d="M5 12h14" /><path d="M12 5l7 7-7 7" /></svg>
                   </div>
                 )}
               </div>
