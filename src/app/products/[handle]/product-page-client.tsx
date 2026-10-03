@@ -89,6 +89,52 @@ const trustBadges = [
 const VIDEO_POSTER = "/products/nuro-ugc-poster.webp";
 const isVideo = (src: string) => src.endsWith(".mp4");
 
+// The demo clip plays with sound. Browsers only allow sound after a user
+// gesture, so instead of autoplaying muted we show the poster with a big play
+// button; tapping it starts the video unmuted and swaps in the native controls.
+function GalleryVideo({ src, className }: { src: string; className?: string }) {
+  const ref = useRef<HTMLVideoElement>(null);
+  const [started, setStarted] = useState(false);
+
+  const start = () => {
+    const v = ref.current;
+    if (!v) return;
+    v.muted = false;
+    v.play().catch(() => {});
+    setStarted(true);
+  };
+
+  return (
+    <div className="relative flex h-full w-full items-center justify-center">
+      <video
+        ref={ref}
+        className={className}
+        playsInline
+        controls={started}
+        preload="metadata"
+        poster={VIDEO_POSTER}
+        onPlay={() => setStarted(true)}
+      >
+        <source src={src} type="video/mp4" />
+      </video>
+      {!started && (
+        <button
+          type="button"
+          onClick={start}
+          aria-label="Play video"
+          className="group absolute inset-0 flex items-center justify-center cursor-pointer"
+        >
+          <span className="flex h-[72px] w-[72px] items-center justify-center rounded-full bg-white/90 shadow-[0_6px_24px_rgba(0,0,0,0.25)] ring-1 ring-black/5 transition-transform duration-200 group-hover:scale-105">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="currentColor" className="ml-1 text-gold">
+              <polygon points="6 4 20 12 6 20 6 4" />
+            </svg>
+          </span>
+        </button>
+      )}
+    </div>
+  );
+}
+
 export default function ProductPageClient({ product }: { product: Product }) {
   const { addItem } = useCart();
   const [selectedImage, setSelectedImage] = useState(0);
@@ -120,37 +166,6 @@ export default function ProductPageClient({ product }: { product: Product }) {
       });
     }
   }, [product]);
-
-  useEffect(() => {
-    // Browsers block UNMUTED autoplay with zero interaction, so the demo video
-    // starts muted (autoplay) and we unmute it on the viewer's first gesture
-    // anywhere on the page (click / tap / key / scroll). That first gesture is a
-    // "user activation," which is exactly what the browser requires to allow
-    // sound, so for most visitors the video is audible within a second.
-    let done = false;
-    const unmute = () => {
-      if (done) return;
-      const vids = Array.from(document.querySelectorAll("video"));
-      const v =
-        vids.find((el) => el.currentSrc.includes("nuro-ugc-demo") && el.offsetParent !== null) ||
-        vids.find((el) => el.currentSrc.includes("nuro-ugc-demo"));
-      if (!v) return;
-      done = true;
-      v.muted = false;
-      v.volume = 1;
-      v.play().catch(() => {});
-      cleanup();
-    };
-    // Only gestures that reliably grant audio "user activation" (a scroll/wheel
-    // does not always count, and would waste our one-shot unmute).
-    const events: (keyof WindowEventMap)[] = ["pointerdown", "touchstart", "keydown"];
-    const cleanup = () =>
-      events.forEach((e) => window.removeEventListener(e, unmute));
-    events.forEach((e) =>
-      window.addEventListener(e, unmute, { passive: true })
-    );
-    return cleanup;
-  }, []);
 
   const handleAddToCart = () => {
     addItem(
@@ -203,17 +218,7 @@ export default function ProductPageClient({ product }: { product: Product }) {
                   <div key={i} className="relative w-full flex-shrink-0 snap-center">
                     <div className={`relative aspect-square rounded-3xl ${isVideo(src) ? "flex items-center justify-center" : "overflow-hidden bg-gradient-to-br from-gold-light via-surface to-gold-light border border-black/[0.06]"}`}>
                       {isVideo(src) ? (
-                        <video
-                          className="h-full w-auto rounded-3xl"
-                          autoPlay
-                          muted
-                          playsInline
-                          controls
-                          preload="metadata"
-                          poster={VIDEO_POSTER}
-                        >
-                          <source src={src} type="video/mp4" />
-                        </video>
+                        <GalleryVideo src={src} className="h-full w-auto rounded-3xl" />
                       ) : (
                         <Image
                           src={src}
@@ -253,17 +258,10 @@ export default function ProductPageClient({ product }: { product: Product }) {
                     className="absolute inset-0 flex items-center justify-center"
                   >
                     {isVideo(product.images[selectedImage]) ? (
-                      <video
+                      <GalleryVideo
+                        src={product.images[selectedImage]}
                         className="h-full w-auto rounded-3xl"
-                        autoPlay
-                        muted
-                        playsInline
-                        controls
-                        preload="metadata"
-                        poster={VIDEO_POSTER}
-                      >
-                        <source src={product.images[selectedImage]} type="video/mp4" />
-                      </video>
+                      />
                     ) : (
                       <Image
                         src={product.images[selectedImage]}
